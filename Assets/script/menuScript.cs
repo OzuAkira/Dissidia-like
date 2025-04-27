@@ -8,6 +8,7 @@ public abstract class menuScript : MonoBehaviour
     public Sprite OffImage;
     public Sprite OnImage;
     Image _image;
+    
     Vector3 gpos;
     public abstract void select();
     void Start()
@@ -18,13 +19,13 @@ public abstract class menuScript : MonoBehaviour
     public void On()
     {
         if (_image == null) return;
-        _image.enabled = OnImage;
+        _image.sprite = OnImage;
         gameObject.transform.localScale = gpos * 1.5f;
     }
     public void Off()
     {
         if (_image ==null) return;
-        _image.enabled = OffImage;
+        _image.sprite = OffImage;
         gameObject.transform.localScale = gpos;
     }
 }
