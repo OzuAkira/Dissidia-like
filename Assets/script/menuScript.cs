@@ -1,29 +1,30 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public abstract class menuScript : MonoBehaviour
 {
-    public Sprite OffSprit;
-    public Sprite OnSprit;
-    SpriteRenderer SR;
+    public Sprite OffImage;
+    public Sprite OnImage;
+    Image _image;
     Vector3 gpos;
     public abstract void select();
     void Start()
     {
-        SR = gameObject.GetComponent<SpriteRenderer>();
+        _image = gameObject.GetComponent<Image>();
         gpos = gameObject.transform.lossyScale;
     }
     public void On()
     {
-        if (SR == null) return;
-        SR.enabled = OnSprit;
+        if (_image == null) return;
+        _image.enabled = OnImage;
         gameObject.transform.localScale = gpos * 1.5f;
     }
     public void Off()
     {
-        if (SR==null) return;
-        SR.enabled = OffSprit;
+        if (_image ==null) return;
+        _image.enabled = OffImage;
         gameObject.transform.localScale = gpos;
     }
 }
