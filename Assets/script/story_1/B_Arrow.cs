@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -33,10 +34,7 @@ public class B_Arrow : MonoBehaviour
             _cursorIndex++;
             left_count = false;
         }
-        /* else if()
-         {
-             menu[_cursorIndex].select();
-         }*/
+
 
 
         if (_cursorIndex < 0) _cursorIndex = 0;
@@ -46,6 +44,12 @@ public class B_Arrow : MonoBehaviour
         //x = 1.53 , y = -0.14
 
     }
+
+    void OnFire()
+    {
+        menu[_cursorIndex].select();
+    }
+
     void UpdateMenu()
     {
         int i = 0;

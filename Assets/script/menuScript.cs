@@ -20,12 +20,13 @@ public abstract class menuScript : MonoBehaviour
     {
         if (_image == null) return;
         _image.sprite = OnImage;
-        gameObject.transform.localScale = gpos * 1.5f;
+    
+        //gameObject.transform.localScale = gpos * 1.5f;
     }
     public void Off()
     {
         if (_image ==null) return;
         _image.sprite = OffImage;
-        gameObject.transform.localScale = gpos;
+        //gameObject.transform.localScale = gpos;
     }
 }

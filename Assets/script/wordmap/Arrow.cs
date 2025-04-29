@@ -54,7 +54,8 @@ public class Arrow : MonoBehaviour
             if(_cursorIndex == i)
             {
                 menuTable.On();
-                cursor.transform.position = menuTable.transform.position + new Vector3(140f,-20f,0);
+                
+                cursor.transform.localPosition = menuTable.transform.localPosition + new Vector3(100f,-30f,0);
             }
             else menuTable.Off();
             i++;
