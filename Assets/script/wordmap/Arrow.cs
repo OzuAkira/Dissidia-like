@@ -46,6 +46,10 @@ public class Arrow : MonoBehaviour
         //x = 1.53 , y = -0.14
 
     }
+    void OnFire()
+    {
+        menu[_cursorIndex].select();
+    }
     void UpdateMenu()
     {
         int i = 0;

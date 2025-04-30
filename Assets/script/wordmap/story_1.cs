@@ -13,7 +13,7 @@ public class story_1 : menuScript
     {
 
         yield return new WaitForSeconds(0.2f);
-        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync("");
+        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync("story(1");
         while (asyncLoad.isDone)
         {
             yield return null;

@@ -13,7 +13,12 @@ public class PageMaster : MonoBehaviour
     public GameObject cursor;
     public B_Arrow B_Arrow;
     private GameObject _;
-    
+
+    private void Awake()
+    {
+        Application.targetFrameRate = 60;
+    }
+
     public void PageUpdate(string _vector)
     {
         if (_vector == "u" || _vector == "U")
@@ -65,11 +70,12 @@ public class PageMaster : MonoBehaviour
             _headList.transform.localPosition += new Vector3(0, -MpF, 0);
             yield return null;
         }
-        _ = _headList;
+        _ = _tailList;
 
-        _headList = _tailList;
-        _centerList = _;
-        _tailList = _headList;
+        _tailList = _centerList;
+        _centerList = _headList;
+        _headList = _;
+        
 
         cursor.SetActive(true);
 
