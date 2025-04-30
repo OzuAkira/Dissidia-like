@@ -13,6 +13,7 @@ public class B_Arrow : MonoBehaviour
     public menuScript[] menu;
     public bool right_count = false;
     public bool left_count = false;
+    //public GameObject MasterObj;
 
     private void OnMove(InputValue value)
     {
@@ -63,5 +64,18 @@ public class B_Arrow : MonoBehaviour
             else menuTable.Off();
             i++;
         }
+    }
+    public void UpdateList(Transform center)
+    {
+        
+        Transform childObj;
+        menuScript mS;
+        for(int i = 0; i < center.childCount; i++)
+        {
+            childObj = center.GetChild(i);
+            mS = childObj.GetComponent<menuScript>();
+            menu[i] = mS;
+        }
+        
     }
 }

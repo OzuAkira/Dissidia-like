@@ -11,11 +11,9 @@ public class PageMaster : MonoBehaviour
     public int fps = 60;
     public float MpF = 16f;
     public GameObject cursor;
+    public B_Arrow B_Arrow;
     private GameObject _;
-    /*private void Awake()
-    {
-        Application.targetFrameRate = fps;
-    }*/
+    
     public void PageUpdate(string _vector)
     {
         if (_vector == "u" || _vector == "U")
@@ -27,7 +25,7 @@ public class PageMaster : MonoBehaviour
         else if (_vector == "d" || _vector == "D")
         {
             StartCoroutine("DOWN_ChangePage");
-         
+            
         }
         else
         {
@@ -52,6 +50,9 @@ public class PageMaster : MonoBehaviour
         _tailList = _;
 
         cursor.SetActive(true);
+
+        Transform cl = _centerList.transform;
+        B_Arrow.UpdateList(cl);
     }
     IEnumerator DOWN_ChangePage()
     {
@@ -71,5 +72,8 @@ public class PageMaster : MonoBehaviour
         _tailList = _headList;
 
         cursor.SetActive(true);
+
+        Transform cl = _centerList.transform;
+        B_Arrow.UpdateList(cl);
     }
 }
