@@ -49,6 +49,7 @@ public class Arrow : MonoBehaviour
     void OnFire()
     {
         menu[_cursorIndex].select();
+      //  Debug.Log("test");
     }
     void UpdateMenu()
     {

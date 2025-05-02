@@ -82,4 +82,11 @@ public class PageMaster : MonoBehaviour
         Transform cl = _centerList.transform;
         B_Arrow.UpdateList(cl);
     }
+
+
+
+    public void TurnManager()
+    {
+
+    }
 }

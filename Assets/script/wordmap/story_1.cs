@@ -7,14 +7,18 @@ public class story_1 : menuScript
 {
     public override void select()
     {
-        StartCoroutine("Load_S_Scene");
+        Debug.Log("Farway");
+        StartCoroutine("Load_Scene");
     }
-    IEnumerable Load_S_Scene()
+    IEnumerator Load_Scene()
     {
 
-        yield return new WaitForSeconds(0.2f);
-        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync("story(1");
-        while (asyncLoad.isDone)
+        //yield return new WaitForSeconds(0.2f);
+        Debug.Log("tae");
+        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync("story_1");
+        
+        Debug.Log("test");
+        while (!asyncLoad.isDone)
         {
             yield return null;
         }

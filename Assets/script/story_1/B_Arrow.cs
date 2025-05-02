@@ -70,9 +70,9 @@ public class B_Arrow : MonoBehaviour
         
         Transform childObj;
         menuScript mS;
-        for(int i = 0; i < center.childCount; i++)
+        for(int i = 1; i <= center.childCount; i++)
         {
-            childObj = center.GetChild(i);
+            childObj = center.GetChild(i-1);
             mS = childObj.GetComponent<menuScript>();
             menu[i] = mS;
         }
