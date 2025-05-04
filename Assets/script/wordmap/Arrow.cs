@@ -6,9 +6,11 @@ using UnityEngine.InputSystem;
 
 public class Arrow : MonoBehaviour
 {
-    private Vector3 _velocity;
-    public GameObject cursor;
+    //private Vector3 _velocity;
+    //public GameObject cursor;
+    public bool isY;
     public int _cursorIndex;
+    public Vector3 plusPos = new Vector3(100f,-30f,0);
     public menuScript[] menu;
     public bool right_count = false;
     public bool left_count = false;
@@ -16,8 +18,16 @@ public class Arrow : MonoBehaviour
     private void OnMove(InputValue value)
     {
         var axis = value.Get<Vector2>();
-        if(axis.x == 1 && right_count ==false) right_count = true;
-        else if(axis.x == -1 && left_count ==false) left_count = true;
+        if(isY)
+        {
+            if(axis.y == 1 && right_count ==false) right_count = true;
+            else if(axis.y == -1 && left_count ==false) left_count = true;
+        }
+        else
+        {
+            if(axis.x == 1 && right_count ==false) right_count = true;
+            else if(axis.x == -1 && left_count ==false) left_count = true;
+        }
     }
     void Update()
     {
@@ -60,7 +70,7 @@ public class Arrow : MonoBehaviour
             {
                 menuTable.On();
                 
-                cursor.transform.localPosition = menuTable.transform.localPosition + new Vector3(100f,-30f,0);
+                gameObject.transform.localPosition = menuTable.transform.localPosition + plusPos;
             }
             else menuTable.Off();
             i++;
