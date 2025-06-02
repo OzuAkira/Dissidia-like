@@ -47,7 +47,7 @@ public class NewArrow : MonoBehaviour
         else if (left)
         {
             _cursorIndex--;
-            if (_cursorIndex % menuLine == 0) _cursorIndex++;
+            if ((_cursorIndex+1) % menuLine == 0) _cursorIndex++;
             left = false;
         }
         else if (up)
