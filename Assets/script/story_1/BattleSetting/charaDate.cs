@@ -4,8 +4,11 @@ using UnityEngine;
 
 public class charaDate : menuScript
 {
+    GameObject cObject = GameObject.Find("c_cursor");
+    
     public override void select()
     {
-        Debug.Log("おｋ");
+        NewArrow cdb = cObject.GetComponent<NewArrow>();
+
     }
 }
