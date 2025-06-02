@@ -20,7 +20,7 @@ public class Arrow : MonoBehaviour
     public bool down_count = false;
 
     
-    private void OnMove(InputValue value)
+    public void OnMove(InputValue value)
     {
         var axis = value.Get<Vector2>();
         
@@ -73,7 +73,7 @@ public class Arrow : MonoBehaviour
         //x = 1.53 , y = -0.14
 
     }
-    void OnFire()
+    public void OnFire()
     {
         menu[_cursorIndex].select();
       //  Debug.Log("test");

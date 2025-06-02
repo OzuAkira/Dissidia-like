@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -12,8 +13,15 @@ public class doubleArrow : MonoBehaviour
     bool right_count = false;
     bool left_count = false;
     bool up_count = false;
-    bool down_count = false; 
-    private void OnMove(InputValue input)
+    bool down_count = false;
+    public GameObject oldCorsor;
+    private void Awake()
+    {
+        Debug.Log("‚¨‚È‚µ‚á‚·");
+        oldCorsor.GetComponent<PlayerInput>().DeactivateInput();
+        gameObject.GetComponent<PlayerInput>().ActivateInput();
+    }
+    public void OnMove(InputValue input)
     {
         var axis = input.Get<Vector2>();
         if(axis.x == 1 && right_count ==false) right_count = true;
@@ -50,7 +58,7 @@ public class doubleArrow : MonoBehaviour
         if (_cursorIndex >= cursorMax) _cursorIndex = _menu.Length-1;
         if (_cursorIndex != oldCursor) UpdateMenu();
     }
-    void OnFire()
+    public void OnFire()
     {
         _menu[_cursorIndex].select();
       //  Debug.Log("test");
