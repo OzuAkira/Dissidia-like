@@ -40,13 +40,14 @@ public class NewArrow : MonoBehaviour
     {
         if (right)
         {
-            //if (_cursorIndex+1 % menuLine == 0) _cursorIndex--;
             _cursorIndex++;
+            if (_cursorIndex % menuLine == 0) _cursorIndex--;
             right = false;
         }
         else if (left)
         {
             _cursorIndex--;
+            if (_cursorIndex % menuLine == 0) _cursorIndex++;
             left = false;
         }
         else if (up)
