@@ -14,5 +14,6 @@ public class F_numberSetting : MonoBehaviour
         
         by 2025/6/11 ‚Ì‰´
         */
+
     }
 }
