@@ -5,7 +5,9 @@ using UnityEngine;
 public class F_numberSetting : MonoBehaviour
 {
     // Start is called before the first frame update
-    public int F_Num;
+    public int F_Num = 0;
+    public int[] num_id_cha = {0,0,0 };
+    public ScriptableObject cdb;
     public void character_select(int C_index)
     {
         /*
@@ -14,6 +16,6 @@ public class F_numberSetting : MonoBehaviour
         
         by 2025/6/11 ‚Ì‰´
         */
-
+        num_id_cha[F_Num] = cdb;//C_index
     }
 }

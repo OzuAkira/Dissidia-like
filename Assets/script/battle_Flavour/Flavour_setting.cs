@@ -5,6 +5,7 @@ using UnityEngine;
 public class Flavour_setting : menuScript
 {
     public GameObject characterList;
+    public GameObject gm;
     public int favour_number;
 
     //public GameObject cursor;
@@ -13,10 +14,8 @@ public class Flavour_setting : menuScript
         characterList.SetActive(false);
     }
     public override void select()
-    { 
-        F_numberSetting f_NumberSetting = GetComponent<F_numberSetting>();
-        f_NumberSetting.F_Num = favour_number;
-        characterList.SetActive(true);
+    {
+        StartCoroutine(number());
     }
 
 
@@ -24,5 +23,13 @@ public class Flavour_setting : menuScript
     void Update()
     {
         if (characterList.activeSelf == true) gameObject.SetActive(false);
+    }
+    IEnumerator number()
+    {
+        F_numberSetting f_NumberSetting = gm.GetComponent<F_numberSetting>();
+        f_NumberSetting.F_Num = favour_number;
+        //yield return new WaitForSeconds(1f);
+        yield return null;
+        characterList.SetActive(true);
     }
 }
