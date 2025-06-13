@@ -15,7 +15,9 @@ public class charaDate : menuScript
         F_numberSetting f_Number = gm.GetComponent<F_numberSetting>();
         NewArrow cdb = cObject.GetComponent<NewArrow>();
 
-        //Debug.Log("aaa");
-        f_Number.character_select(cdb._cursorIndex);
+        Debug.Log("cdb._cursorIndex = "+ cdb._cursorIndex);
+        StartCoroutine(f_Number.character_select(cdb._cursorIndex));
+        //myobj.SetActive(false);
+
     }
 }

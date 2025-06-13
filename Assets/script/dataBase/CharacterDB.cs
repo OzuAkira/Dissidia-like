@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CharacterDB : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class CharacterDB : MonoBehaviour
     public class Character_table : ScriptableObject
     {
         public List<parameters> characterDB;
+        
     }
     [System.Serializable]
     public class parameters
@@ -20,6 +22,7 @@ public class CharacterDB : MonoBehaviour
         public int attack;
         public int defense;
         public int speed;
+        public Sprite characterIcon;
     }
 }
 

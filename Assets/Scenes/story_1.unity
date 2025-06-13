@@ -646,7 +646,9 @@ MonoBehaviour:
   OnImage: {fileID: 0}
   characterList: {fileID: 1687885046}
   gm: {fileID: 1309063677}
+  mylist: {fileID: 982022631}
   favour_number: 2
+  character_Table: {fileID: 11400000, guid: 2e8050530d42bae458dc98947f9a50c8, type: 2}
 --- !u!1 &329474160
 GameObject:
   m_ObjectHideFlags: 0
@@ -822,8 +824,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   OffImage: {fileID: 0}
   OnImage: {fileID: 0}
-  cObject: {fileID: 0}
-  gm: {fileID: 0}
+  cObject: {fileID: 1652095058}
+  gm: {fileID: 1309063677}
 --- !u!114 &405294376
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1019,8 +1021,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   OffImage: {fileID: 0}
   OnImage: {fileID: 0}
-  cObject: {fileID: 0}
-  gm: {fileID: 0}
+  cObject: {fileID: 1652095058}
+  gm: {fileID: 1309063677}
 --- !u!114 &512955638
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1615,8 +1617,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   OffImage: {fileID: 0}
   OnImage: {fileID: 0}
-  cObject: {fileID: 0}
-  gm: {fileID: 0}
+  cObject: {fileID: 1652095058}
+  gm: {fileID: 1309063677}
 --- !u!114 &834555871
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2394,8 +2396,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   F_Num: 0
-  num_id_cha: 000000000000000000000000
-  cdb: {fileID: 11400000, guid: d12c68c9971dbe54fa48580849b026d6, type: 2}
+  number_select: {fileID: 982022631}
+  characterList: {fileID: 1687885046}
+  fst:
+  - {fileID: 1495812069}
+  - {fileID: 1714994644}
+  - {fileID: 278772601}
+  cdb: {fileID: 11400000, guid: 2e8050530d42bae458dc98947f9a50c8, type: 2}
 --- !u!1 &1322931822
 GameObject:
   m_ObjectHideFlags: 0
@@ -2808,7 +2815,9 @@ MonoBehaviour:
   OnImage: {fileID: 0}
   characterList: {fileID: 1687885046}
   gm: {fileID: 1309063677}
+  mylist: {fileID: 982022631}
   favour_number: 0
+  character_Table: {fileID: 11400000, guid: 2e8050530d42bae458dc98947f9a50c8, type: 2}
 --- !u!1 &1591164612
 GameObject:
   m_ObjectHideFlags: 0
@@ -2917,7 +2926,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1627277050
 Transform:
   m_ObjectHideFlags: 0
@@ -3233,7 +3242,9 @@ MonoBehaviour:
   OnImage: {fileID: 0}
   characterList: {fileID: 1687885046}
   gm: {fileID: 1309063677}
+  mylist: {fileID: 982022631}
   favour_number: 1
+  character_Table: {fileID: 11400000, guid: 2e8050530d42bae458dc98947f9a50c8, type: 2}
 --- !u!1 &1732734477
 GameObject:
   m_ObjectHideFlags: 0
@@ -3916,8 +3927,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   OffImage: {fileID: 0}
   OnImage: {fileID: 0}
-  cObject: {fileID: 0}
-  gm: {fileID: 0}
+  cObject: {fileID: 1652095058}
+  gm: {fileID: 1309063677}
 --- !u!114 &1993692494
 MonoBehaviour:
   m_ObjectHideFlags: 0
