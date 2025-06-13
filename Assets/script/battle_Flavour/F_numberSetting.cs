@@ -7,7 +7,7 @@ public class F_numberSetting : MonoBehaviour
 {
     // Start is called before the first frame update
     public int F_Num = 0;
-    private int[] num_id_cha = {-999, 999, 999 };
+    private int[] num_id_cha = {-999, -998, -997 };
     public GameObject number_select,characterList;
     public GameObject[] fst;
     private Flavour_setting fs;
