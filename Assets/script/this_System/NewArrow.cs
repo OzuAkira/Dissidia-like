@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class NewArrow : MonoBehaviour
 {
@@ -47,7 +48,7 @@ public class NewArrow : MonoBehaviour
         else if (left)
         {
             _cursorIndex--;
-            if ((_cursorIndex+1) % menuLine == 0) _cursorIndex++;
+            if ((_cursorIndex + 1) % menuLine == 0) _cursorIndex++;
             left = false;
         }
         else if (up)
@@ -59,9 +60,11 @@ public class NewArrow : MonoBehaviour
         else if (down)
         {
             _cursorIndex += menuLine;
-            if (_cursorIndex >menus.Length) _cursorIndex -= menuLine;
+            if (_cursorIndex > menus.Length) _cursorIndex -= menuLine;
             down = false;
         }
+        else if (Input.GetKeyDown(KeyCode.Return)) menus[_cursorIndex].select();
+  
     }
     void UpdateMenue()
     {
