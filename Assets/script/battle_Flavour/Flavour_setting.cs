@@ -37,6 +37,7 @@ public class Flavour_setting : menuScript
                 OffImage = icon;
                 OnImage = icon;
             }
+            
         }
     }
 
