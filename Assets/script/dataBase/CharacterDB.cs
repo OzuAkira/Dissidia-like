@@ -9,7 +9,7 @@ public class CharacterDB : MonoBehaviour
     [CreateAssetMenu(menuName = "Character_table")]
     public class Character_table : ScriptableObject
     {
-        public List<parameters> characterDB;
+        public List<parameters> _characterDB;
         
     }
     [System.Serializable]

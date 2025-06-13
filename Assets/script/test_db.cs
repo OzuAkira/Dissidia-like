@@ -12,7 +12,7 @@ public class test_db : MonoBehaviour
     {
         Image image = gameObject.GetComponent<Image>();
         Debug.Log("ccc");
-        foreach(parameters _parameters in character_Table.characterDB)
+        foreach(parameters _parameters in character_Table._characterDB)
         {
             if (_parameters.Character_id == favour_number)
             {

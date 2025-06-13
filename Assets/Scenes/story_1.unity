@@ -648,7 +648,7 @@ MonoBehaviour:
   gm: {fileID: 1309063677}
   mylist: {fileID: 982022631}
   favour_number: 2
-  character_Table: {fileID: 11400000, guid: 2e8050530d42bae458dc98947f9a50c8, type: 2}
+  character_Table: {fileID: 11400000, guid: 35d788de88ddcba45acfd8ca87894e64, type: 2}
 --- !u!1 &329474160
 GameObject:
   m_ObjectHideFlags: 0
@@ -2342,6 +2342,7 @@ GameObject:
   - component: {fileID: 1309063678}
   - component: {fileID: 1309063679}
   - component: {fileID: 1309063680}
+  - component: {fileID: 1309063681}
   m_Layer: 0
   m_Name: GamMaster
   m_TagString: Untagged
@@ -2396,13 +2397,35 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   F_Num: 0
+  num_id_cha: 19fcffff1afcffff1bfcffff
   number_select: {fileID: 982022631}
   characterList: {fileID: 1687885046}
   fst:
   - {fileID: 1495812069}
   - {fileID: 1714994644}
   - {fileID: 278772601}
-  cdb: {fileID: 11400000, guid: 2e8050530d42bae458dc98947f9a50c8, type: 2}
+--- !u!114 &1309063681
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1309063677}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41f9be0f83b724d4e8f38ee3c708c8a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  arrow: {fileID: 1652095058}
+  dumyObj: {fileID: 2715455051086252144, guid: b10baaacf9645d147b1ca586296e07d3, type: 3}
+  cells:
+  - {fileID: 89383782}
+  - {fileID: 743335885}
+  - {fileID: 1993692492}
+  - {fileID: 834555869}
+  - {fileID: 512955636}
+  - {fileID: 405294374}
+  character_Table: {fileID: 11400000, guid: 35d788de88ddcba45acfd8ca87894e64, type: 2}
 --- !u!1 &1322931822
 GameObject:
   m_ObjectHideFlags: 0
@@ -2817,7 +2840,7 @@ MonoBehaviour:
   gm: {fileID: 1309063677}
   mylist: {fileID: 982022631}
   favour_number: 0
-  character_Table: {fileID: 11400000, guid: 2e8050530d42bae458dc98947f9a50c8, type: 2}
+  character_Table: {fileID: 11400000, guid: 35d788de88ddcba45acfd8ca87894e64, type: 2}
 --- !u!1 &1591164612
 GameObject:
   m_ObjectHideFlags: 0
@@ -3244,7 +3267,7 @@ MonoBehaviour:
   gm: {fileID: 1309063677}
   mylist: {fileID: 982022631}
   favour_number: 1
-  character_Table: {fileID: 11400000, guid: 2e8050530d42bae458dc98947f9a50c8, type: 2}
+  character_Table: {fileID: 11400000, guid: 35d788de88ddcba45acfd8ca87894e64, type: 2}
 --- !u!1 &1732734477
 GameObject:
   m_ObjectHideFlags: 0

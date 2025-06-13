@@ -28,7 +28,7 @@ public class Flavour_setting : menuScript
     {
         image = gameObject.GetComponent<Image>();
         Debug.Log("ccc");
-        foreach(parameters _parameters in character_Table.characterDB)
+        foreach(parameters _parameters in character_Table._characterDB)
         {
             if(_parameters.Character_id == Sequential[favour_number])
             {
@@ -40,14 +40,11 @@ public class Flavour_setting : menuScript
         }
     }
 
-    void Update()
-    {
-        //if (characterList.activeSelf == true) gameObject.SetActive(false);
-    }
     IEnumerator number()
     {
         F_numberSetting f_NumberSetting = gm.GetComponent<F_numberSetting>();
         f_NumberSetting.F_Num = favour_number;
+
 
 
         characterList.SetActive(true);
