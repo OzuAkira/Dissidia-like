@@ -60,10 +60,10 @@ public class Arrow : MonoBehaviour
             _cursorIndex -= listColams;
             down_count = false;
         }
-       /* else if()
+        else if(Input.GetKeyDown(KeyCode.Return))
         {
             menu[_cursorIndex].select();
-        }*/
+        }
 
 
         if(_cursorIndex < 0)_cursorIndex = menu.Length-1;
@@ -75,7 +75,7 @@ public class Arrow : MonoBehaviour
     }
     public void OnFire()
     {
-        menu[_cursorIndex].select();
+       // menu[_cursorIndex].select();
       //  Debug.Log("test");
     }
     void UpdateMenu()
