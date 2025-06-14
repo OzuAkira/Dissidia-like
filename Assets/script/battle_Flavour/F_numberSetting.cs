@@ -18,11 +18,11 @@ public class F_numberSetting : MonoBehaviour
         characterList.SetActive(false);
         number_select.SetActive(true);
 
-
+        /*
         Debug.Log(num_id_cha[0]);
         Debug.Log(num_id_cha[1]);
         Debug.Log(num_id_cha[2]);
-
+        */
 
         foreach (GameObject objects in fst)
         {

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Localization.Plugins.XLIFF.V12;
 using UnityEngine;
 using UnityEngine.UI;
 using static CharacterDB;
@@ -9,7 +10,7 @@ public class Repeated_Evasion : MonoBehaviour
     [SerializeField] GameObject arrow;
     [SerializeField] GameObject[] cells;
     [SerializeField] GameObject[] dumy_cells;
-    private menuScript dumyMenu;
+    //private menuScript dumyMenu;
     [SerializeField] CharacterDB.Character_table character_Table;
     NewArrow newArrow;
     public Transform _obj;
@@ -19,41 +20,62 @@ public class Repeated_Evasion : MonoBehaviour
         newArrow = arrow.GetComponent<NewArrow>();
         //f_NumberSetting = gameObject.GetComponent<F_numberSetting>();
         //dumyMenu = dumyObj.GetComponent<menuScript>();
-        
-
+        List<int> num_id = new List<int>();
         foreach (int x in num_id_cha)
         {
             if(x >= 0)
             {
-                //int i = 0;
-                foreach(parameters _parameters in character_Table._characterDB)
+                num_id.Add(x);
+                void unknown()
                 {
-                    if (_parameters.Character_id == x)
+                    /*int i = 0;
+                    foreach(parameters _parameters in character_Table._characterDB)
                     {
-                        //RectTransform _transform = cells[x].GetComponent<RectTransform>();
-                        //GameObject insObj = Instantiate(dumyObj, _transform.position, Quaternion.identity,_obj);
-                        //menuScript insMenu = insObj.GetComponent<menuScript>();
-                        menuScript d_Menu = dumy_cells[x].GetComponent<menuScript>();
-                        newArrow.menus[x] = d_Menu;
+                        if (_parameters.Character_id == x)
+                        {
+                            //RectTransform _transform = cells[x].GetComponent<RectTransform>();
+                            //GameObject insObj = Instantiate(dumyObj, _transform.position, Quaternion.identity,_obj);
+                            //menuScript insMenu = insObj.GetComponent<menuScript>();
+                            menuScript d_Menu = dumy_cells[x].GetComponent<menuScript>();
+                            newArrow.menus[x] = d_Menu;
 
-                        d_Menu.OnImage = _parameters.characterIcon;
-                        d_Menu.OffImage = _parameters.characterIcon;
-                        dumy_cells[x].GetComponent<Image>().sprite = _parameters.characterIcon;
-                        cells[x].SetActive(false);
-                        dumy_cells[x].SetActive(true);
-                        break;
+                            d_Menu.OnImage = _parameters.characterIcon;
+                            d_Menu.OffImage = _parameters.characterIcon;
+                            dumy_cells[x].GetComponent<Image>().sprite = _parameters.characterIcon;
+                            cells[x].SetActive(false);
+                            dumy_cells[x].SetActive(true);
+                            break;
+                        }
+                        //i++;
                     }
-                    //i++;
-                }
-                for(int i=0;i<cells.Length;i++)
-                {
-                    if(i != x)
+                    for(int i=0;i<cells.Length;i++)
                     {
-                        newArrow.menus[i] = cells[i].GetComponent<menuScript>();
-                        //dumy_cells[i].SetActive(false);
+                        if(i != x)
+                        {
+                            newArrow.menus[i] = cells[i].GetComponent<menuScript>();
+                            //dumy_cells[i].SetActive(false);
+                        }
                     }
+                    */
                 }
+                
             }
+        }
+        for (int i = 0; i < newArrow.menus.Length; i++)
+        {
+            
+            cells[i].SetActive(true);
+            newArrow.menus[i] = cells[i].GetComponent<menuScript>();
+            dumy_cells[i].SetActive(false);
+            
+        }
+        foreach (int id in num_id)
+        {
+
+            newArrow.menus[id] = dumy_cells[id].GetComponent<menuScript>();
+            dumy_cells[id].SetActive(true);
+            cells[id].SetActive(false);
+            
         }
     }
 }
