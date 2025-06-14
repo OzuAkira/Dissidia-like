@@ -27,7 +27,7 @@ public class Flavour_setting : menuScript
     public void updateWindow(int[] Sequential)
     {
         image = gameObject.GetComponent<Image>();
-        Debug.Log("ccc");
+        //Debug.Log("ccc");
         foreach(parameters _parameters in character_Table._characterDB)
         {
             if(_parameters.Character_id == Sequential[favour_number])
