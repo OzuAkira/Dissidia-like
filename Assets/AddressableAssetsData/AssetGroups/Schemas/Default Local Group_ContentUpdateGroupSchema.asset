@@ -9,14 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
-  m_Name: New Character_table 1
-  m_EditorClassIdentifier: Assembly-CSharp::CharacterDB/Character_table
-  characterDB:
-  - Character_id: 111
-    Character_name: aaaaaaaa
-    HP: 0
-    MP: 0
-    attack: 0
-    defense: 0
-    speed: 0
+  m_Script: {fileID: 11500000, guid: 5834b5087d578d24c926ce20cd31e6d6, type: 3}
+  m_Name: Default Local Group_ContentUpdateGroupSchema
+  m_EditorClassIdentifier: 
+  m_Group: {fileID: 11400000, guid: 9a426fdf1ce130548ae33b8a48963aee, type: 2}
+  m_StaticContent: 0
