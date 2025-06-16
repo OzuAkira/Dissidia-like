@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections;
 
-public class test_db : MonoBehaviour
+public class breakScene : MonoBehaviour
 {
     [SerializeField] private bool useGravity = true;                            // 重力を有効にするかどうか
     [SerializeField] private Vector3 explodeVel = new Vector3(0, 0, 0.1f);      // 爆発の中心地
@@ -12,11 +12,12 @@ public class test_db : MonoBehaviour
     void Start()
     {
         rigidBodies = GetComponentsInChildren<Rigidbody>();                     // 子(破片)のRigidbodyを取得しておく
-        StartCoroutine("BreakStart");                                           // 動作にディレイを掛けるためコルーチンを使用
+        //StartCoroutine("BreakStart");                                           // 動作にディレイを掛けるためコルーチンを使用
     }
 
     IEnumerator BreakStart()
     {
+        /*
         foreach (Rigidbody rb in rigidBodies)
         {
             rb.isKinematic = false;
@@ -24,7 +25,7 @@ public class test_db : MonoBehaviour
             rb.AddExplosionForce(explodeForce / 5, transform.position + explodeVel, explodeRange);
         }
         yield return new WaitForSeconds(0.02f);                                 // 一瞬動かすことでひび割れを演出
-
+        */
         foreach (Rigidbody rb in rigidBodies)
         {
             rb.isKinematic = true;
@@ -36,5 +37,7 @@ public class test_db : MonoBehaviour
             rb.isKinematic = false;
             rb.AddExplosionForce(explodeForce, transform.position + explodeVel, explodeRange);
         }
+        yield return new WaitForSeconds(1.5f);
+        gameObject.SetActive(false);
     }
 }
