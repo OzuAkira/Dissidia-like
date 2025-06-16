@@ -13,6 +13,7 @@ public class battle_start : menuScript
     
     public override void select()
     {
+        /*
         f_NumberSetting = gm.GetComponent<F_numberSetting>();
         for (int i = 0; i < f_NumberSetting.num_id_cha.Length; i++)
         {
@@ -30,7 +31,7 @@ public class battle_start : menuScript
             }
 
         }
-        
+        */
         setting.SetActive(false);
         battleMap.SetActive(true);
         breakScene.StartCoroutine("BreakStart");
