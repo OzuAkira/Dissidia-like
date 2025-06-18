@@ -78,7 +78,7 @@ public class Arrow : MonoBehaviour
        // menu[_cursorIndex].select();
       //  Debug.Log("test");
     }
-    void UpdateMenu()
+    public void UpdateMenu()
     {
         int i = 0;
         foreach(menuScript menuTable in menu)
