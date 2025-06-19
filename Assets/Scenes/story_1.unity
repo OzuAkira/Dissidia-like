@@ -822,9 +822,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 882306dd287d54d49aa4440d41a14099, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  doFrame: 1
   imege_on: {fileID: 21300000, guid: d9500b9adb8eaf841baaa433cfe80ae8, type: 3}
   imege_off: {fileID: 21300000, guid: ba2fb9c78df74114e86be81c0782338e, type: 3}
-  doFrame: 1
+  _walk: 0
 --- !u!1 &231807499
 GameObject:
   m_ObjectHideFlags: 0
@@ -4278,9 +4279,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 882306dd287d54d49aa4440d41a14099, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  doFrame: 1
   imege_on: {fileID: 21300000, guid: d9500b9adb8eaf841baaa433cfe80ae8, type: 3}
   imege_off: {fileID: 21300000, guid: ba2fb9c78df74114e86be81c0782338e, type: 3}
-  doFrame: 1
+  _walk: 0
 --- !u!1 &1025576836 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -6225816318827270275, guid: 9aeed883d8e44cf4ebaccac2d14e9cf3, type: 3}
@@ -4791,9 +4793,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 882306dd287d54d49aa4440d41a14099, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  doFrame: 1
   imege_on: {fileID: 21300000, guid: d9500b9adb8eaf841baaa433cfe80ae8, type: 3}
   imege_off: {fileID: 21300000, guid: ba2fb9c78df74114e86be81c0782338e, type: 3}
-  doFrame: 1
+  _walk: 0
 --- !u!1 &1241224856 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5545391426020745348, guid: 9aeed883d8e44cf4ebaccac2d14e9cf3, type: 3}

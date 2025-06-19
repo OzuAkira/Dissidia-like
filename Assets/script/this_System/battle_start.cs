@@ -15,26 +15,6 @@ public class battle_start : menuScript
 
     public override void select()
     {
-        /*
-        f_NumberSetting = gm.GetComponent<F_numberSetting>();
-        for (int i = 0; i < f_NumberSetting.num_id_cha.Length; i++)
-        {
-            foreach (parameters _parameters in character_table._characterDB)
-            {
-                if (_parameters.Character_id == f_NumberSetting.num_id_cha[i])
-                {
-                    Debug.Log(_parameters);//.Character_id);
-
-                    battleMember[i]=_parameters;
-                    
-                    break;
-                }
-                
-            }
-
-        }
-        */
-        //bool start_flag = false;
         int _count = 0;
         f_NumberSetting = gm.GetComponent<F_numberSetting>();
         foreach (int x in f_NumberSetting.num_id_cha)
@@ -44,7 +24,7 @@ public class battle_start : menuScript
                 _count++;
             }
         }
-        if (_count == _min)
+        if (_count >= _min)
         {
             setting.SetActive(false);
             battleMap.SetActive(true);
