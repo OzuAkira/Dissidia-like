@@ -16,12 +16,7 @@ MonoBehaviour:
   m_Data:
     m_SerializedData: []
   m_GUID: a11d23b31b8b61b43b39a9e79de477c5
-  m_SerializeEntries:
-  - m_GUID: 35d788de88ddcba45acfd8ca87894e64
-    m_Address: Assets/script/dataBase/DB)Character_table.asset
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
+  m_SerializeEntries: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 41a27edc0e40bb04589a24c25921840f, type: 2}
   m_SchemaSet:

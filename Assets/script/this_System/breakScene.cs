@@ -3,7 +3,7 @@ using System.Collections;
 
 public class breakScene : MonoBehaviour
 {
-    [SerializeField] private bool useGravity = true;                            // 重力を有効にするかどうか
+    //[SerializeField] private bool useGravity = true;                            // 重力を有効にするかどうか
     [SerializeField] private Vector3 explodeVel = new Vector3(0, 0, 0.1f);      // 爆発の中心地
     [SerializeField] private float explodeForce = 200f;                         // 爆発の威力
     [SerializeField] private float explodeRange = 10f;                          // 爆発の範囲
