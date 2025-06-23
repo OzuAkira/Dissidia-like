@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEditor.UI;
 using UnityEngine;
 using UnityEngine.UI;
-using static CharacterDB;
+using static prameterDB;
 
 public class Flavour_setting : menuScript
 {
@@ -11,7 +11,7 @@ public class Flavour_setting : menuScript
     private Image image;
     public int favour_number;
 
-    public CharacterDB.Character_table character_Table;
+    public prameterDB.Character_table character_Table;
 
     //public GameObject cursor;
     void Awake()

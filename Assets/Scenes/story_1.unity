@@ -190,7 +190,6 @@ MonoBehaviour:
   gm: {fileID: 1309063677}
   setting: {fileID: 796586273}
   battleMap: {fileID: 1627277049}
-  character_table: {fileID: 11400000, guid: 35d788de88ddcba45acfd8ca87894e64, type: 2}
   breakScene: {fileID: 413513438}
   _min: 1
   battleMember:
@@ -804,7 +803,7 @@ Transform:
   m_GameObject: {fileID: 187968359}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.5, y: 0.7, z: -1}
+  m_LocalPosition: {x: 1, y: 0.7, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1074,7 +1073,7 @@ MonoBehaviour:
   gm: {fileID: 1309063677}
   mylist: {fileID: 982022631}
   favour_number: 2
-  character_Table: {fileID: 11400000, guid: 35d788de88ddcba45acfd8ca87894e64, type: 2}
+  character_Table: {fileID: 11400000, guid: 36ba8a295ca429749beea121b2d01972, type: 2}
 --- !u!1 &279896178 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 788611813340101726, guid: 9aeed883d8e44cf4ebaccac2d14e9cf3, type: 3}
@@ -1707,7 +1706,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f94605a1044c074494af51a46d1d3c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useGravity: 0
   explodeVel: {x: 0, y: 0, z: 0.1}
   explodeForce: 200
   explodeRange: 500
@@ -3697,7 +3695,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &970654780
 Transform:
   m_ObjectHideFlags: 0
@@ -5078,6 +5076,7 @@ GameObject:
   - component: {fileID: 1309063679}
   - component: {fileID: 1309063680}
   - component: {fileID: 1309063681}
+  - component: {fileID: 1309063682}
   m_Layer: 0
   m_Name: GamMaster
   m_TagString: Untagged
@@ -5168,6 +5167,24 @@ MonoBehaviour:
   - {fileID: 1002145026}
   character_Table: {fileID: 11400000, guid: 35d788de88ddcba45acfd8ca87894e64, type: 2}
   _obj: {fileID: 1165108174}
+--- !u!114 &1309063682
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1309063677}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1df563d0e07670649994586610f98833, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterTable: {fileID: 11400000, guid: 36ba8a295ca429749beea121b2d01972, type: 2}
+  enemyTable: {fileID: 11400000, guid: 07bf9536793fef54c93a35eada83c6cb, type: 2}
+  bacePos: {x: 0, y: 0}
+  addPos: {x: 0, y: 0}
+  f_Icon: []
+  e_Icon: []
 --- !u!1 &1322931822
 GameObject:
   m_ObjectHideFlags: 0
@@ -5602,7 +5619,7 @@ MonoBehaviour:
   gm: {fileID: 1309063677}
   mylist: {fileID: 982022631}
   favour_number: 0
-  character_Table: {fileID: 11400000, guid: 35d788de88ddcba45acfd8ca87894e64, type: 2}
+  character_Table: {fileID: 11400000, guid: 36ba8a295ca429749beea121b2d01972, type: 2}
 --- !u!1 &1563179713 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7250013576733240766, guid: 9aeed883d8e44cf4ebaccac2d14e9cf3, type: 3}
@@ -5840,7 +5857,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1627277050
 Transform:
   m_ObjectHideFlags: 0
@@ -6159,6 +6176,51 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!1 &1707865086
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1707865088}
+  - component: {fileID: 1707865087}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1707865087
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1707865086}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c8669b2df3b7b743b0ee66e9217b501, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Table: {fileID: 11400000, guid: e783c670df77be74282a6322f85c14f4, type: 2}
+--- !u!4 &1707865088
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1707865086}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.9900045, y: -0.2683437, z: -0.008900882}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1714994644
 GameObject:
   m_ObjectHideFlags: 0
@@ -6253,7 +6315,7 @@ MonoBehaviour:
   gm: {fileID: 1309063677}
   mylist: {fileID: 982022631}
   favour_number: 1
-  character_Table: {fileID: 11400000, guid: 35d788de88ddcba45acfd8ca87894e64, type: 2}
+  character_Table: {fileID: 11400000, guid: 36ba8a295ca429749beea121b2d01972, type: 2}
 --- !u!1 &1732734477
 GameObject:
   m_ObjectHideFlags: 0
@@ -7549,3 +7611,4 @@ SceneRoots:
   - {fileID: 970654780}
   - {fileID: 1627277050}
   - {fileID: 1309063678}
+  - {fileID: 1707865088}

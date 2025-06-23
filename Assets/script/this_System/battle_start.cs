@@ -2,12 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
-using static CharacterDB;
+using static prameterDB;
 
 public class battle_start : menuScript
 {
     [SerializeField] GameObject gm , setting , battleMap;
-    [SerializeField] CharacterDB.Character_table character_table;
+   // [SerializeField] prameterDB.Character_table character_table;
     [SerializeField] breakScene breakScene ;
     public int _min = 1;
     private F_numberSetting f_NumberSetting;

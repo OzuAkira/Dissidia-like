@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEditor.Localization.Plugins.XLIFF.V12;
 using UnityEngine;
 using UnityEngine.UI;
-using static CharacterDB;
+using static prameterDB;
 
 public class Repeated_Evasion : MonoBehaviour
 {
@@ -11,7 +11,7 @@ public class Repeated_Evasion : MonoBehaviour
     [SerializeField] GameObject[] cells;
     [SerializeField] GameObject[] dumy_cells;
     //private menuScript dumyMenu;
-    [SerializeField] CharacterDB.Character_table character_Table;
+    [SerializeField] prameterDB.Character_table character_Table;
     NewArrow newArrow;
     public Transform _obj;
     //F_numberSetting f_NumberSetting;
