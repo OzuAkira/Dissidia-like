@@ -22,26 +22,10 @@ MonoBehaviour:
     speed: 0
     characterIcon: {fileID: 0}
   - Character_id: 1
-    Character_name: 
+    Character_name: masa
     HP: 0
     MP: 0
     attack: 0
     defense: 0
     speed: 1
-    characterIcon: {fileID: 0}
-  - Character_id: 2
-    Character_name: 
-    HP: 0
-    MP: 0
-    attack: 0
-    defense: 0
-    speed: 3
-    characterIcon: {fileID: 0}
-  - Character_id: 3
-    Character_name: 
-    HP: 0
-    MP: 0
-    attack: 0
-    defense: 0
-    speed: 4
     characterIcon: {fileID: 0}

@@ -46,6 +46,8 @@ public class prameterDB : MonoBehaviour
         public int speed;
         public Sprite EnemyImage;
     }
-
+    
 }
+
+
 

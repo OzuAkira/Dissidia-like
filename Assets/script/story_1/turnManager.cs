@@ -10,6 +10,10 @@ public class turnManager : MonoBehaviour
     F_numberSetting f_NumberSetting;
     [SerializeField] Character_table characterTable;
     [SerializeField] enemyTable enemyTable;
+    [SerializeField] Vector2 bacePos , addPos;
+    [SerializeField] GameObject[] f_Icon , e_Icon;
+    private List<GameObject> turnList = new List<GameObject>();
+
     private List<List<int>> speedList = new List<List<int>>();
     private List<int> id_speed = new List<int>();
     private void Update()
@@ -24,8 +28,8 @@ public class turnManager : MonoBehaviour
                     //Debug.Log(i);
                     if (x.Character_id == f_NumberSetting.num_id_cha[i])
                     {
-                        int a = x.Character_id;
-                        id_speed.Add(a);//x.Character_id);
+                        //int a = x.Character_id;
+                        id_speed.Add(i);//x.Character_id);
                         id_speed.Add(x.speed);
                         speedList.Add(id_speed);
                         id_speed = new List<int>();
@@ -45,14 +49,27 @@ public class turnManager : MonoBehaviour
                 }
 
             
-            List<List<int>> sorted_speedList = speedList.OrderBy(item => item[1]).ToList();
+            List<List<int>> sorted_speedList = speedList.OrderByDescending(item => item[1]).ToList();
 
             foreach (var x in sorted_speedList)
             {
                 Debug.Log("id="+x[0]+"  speed="+x[1]);
+                if (x[0] >= 0)
+                {
+                    GameObject _turn = Instantiate(f_Icon[x[0]], bacePos, Quaternion.identity);
+                    turnList.Add(_turn);
+                    bacePos += addPos;
+                }
+                else
+                {
+                    GameObject _tum_e = Instantiate(e_Icon[x[0]*-1], bacePos, Quaternion.identity);
+                    turnList.Add(_tum_e);
+                    bacePos += addPos;
+                }
             }
         }
 
     }
+
 
 }
