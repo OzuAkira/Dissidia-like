@@ -12,6 +12,7 @@ public class turnManager : MonoBehaviour
     [SerializeField] enemyTable enemyTable;
     [SerializeField] Vector2 bacePos , addPos;
     [SerializeField] GameObject[] f_Icon , e_Icon;
+    //[SerializeField] Transform parent;
     private List<GameObject> turnList = new List<GameObject>();
 
     private List<List<int>> speedList = new List<List<int>>();
