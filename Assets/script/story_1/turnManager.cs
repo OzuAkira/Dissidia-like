@@ -12,12 +12,15 @@ public class turnManager : MonoBehaviour
     [SerializeField] enemyTable enemyTable;
     [SerializeField] Vector2 bacePos , addPos;
     [SerializeField] GameObject[] f_Icon , e_Icon;
-    //[SerializeField] Transform parent;
+    private int count = 0;
+
     private List<GameObject> turnList = new List<GameObject>();
 
     private List<List<int>> speedList = new List<List<int>>();
     private List<int> id_speed = new List<int>();
-    private void Update()
+
+    public List<List<int>> sorted_speedList = new List<List<int>>();
+    private void Start()//コルーチン等で実行するタイミングを測る
     {
         if (Input.GetKeyDown(KeyCode.F))
         {
@@ -50,11 +53,29 @@ public class turnManager : MonoBehaviour
                 }
 
             
-            List<List<int>> sorted_speedList = speedList.OrderByDescending(item => item[1]).ToList();
+            sorted_speedList = speedList.OrderByDescending(item => item[1]).ToList();
+        }
+    }
 
-            foreach (var x in sorted_speedList)
+    private void Update()
+    {
+        if (Input.GetKey(KeyCode.F))
+        {
+            while (count < 6)//ここでturnIconを表示している
             {
-                Debug.Log("id="+x[0]+"  speed="+x[1]);
+                createTurnIcon();
+            }
+        }
+    }
+
+    void createTurnIcon()
+    {
+        foreach (var x in sorted_speedList)
+        {
+            if (count >= 6) break;
+            else
+            {
+                Debug.Log("id=" + x[0] + "  speed=" + x[1]);
                 if (x[0] >= 0)
                 {
                     GameObject _turn = Instantiate(f_Icon[x[0]], bacePos, Quaternion.identity);
@@ -63,14 +84,13 @@ public class turnManager : MonoBehaviour
                 }
                 else
                 {
-                    GameObject _tum_e = Instantiate(e_Icon[x[0]*-1], bacePos, Quaternion.identity);
+                    GameObject _tum_e = Instantiate(e_Icon[x[0] * -1], bacePos, Quaternion.identity);
                     turnList.Add(_tum_e);
                     bacePos += addPos;
                 }
+                count++;
             }
         }
-
     }
-
 
 }
