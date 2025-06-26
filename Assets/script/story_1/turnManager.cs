@@ -59,7 +59,7 @@ public class turnManager : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKey(KeyCode.F))
+        if (Input.GetKeyDown(KeyCode.F))
         {
             while (count < 6)//‚±‚±‚ÅturnIcon‚ð•\Ž¦‚µ‚Ä‚¢‚é
             {
