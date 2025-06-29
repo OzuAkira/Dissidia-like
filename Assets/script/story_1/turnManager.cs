@@ -20,6 +20,7 @@ public class turnManager : MonoBehaviour
     private List<int> id_speed = new List<int>();
 
     public List<List<int>> sorted_speedList = new List<List<int>>();
+    /*
     private void Start()//コルーチン等で実行するタイミングを測る
     {
         if (Input.GetKeyDown(KeyCode.F))
@@ -55,7 +56,7 @@ public class turnManager : MonoBehaviour
             
             sorted_speedList = speedList.OrderByDescending(item => item[1]).ToList();
         }
-    }
+    }*/
 
     private void Update()
     {
