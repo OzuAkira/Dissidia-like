@@ -9,6 +9,7 @@ public class battle_start : menuScript
     [SerializeField] GameObject gm , setting , battleMap;
    // [SerializeField] prameterDB.Character_table character_table;
     [SerializeField] breakScene breakScene ;
+    [SerializeField] turnManager tm ;
     public int _min = 1;
     private F_numberSetting f_NumberSetting;
     public parameters[] battleMember = { null,null,null};
@@ -29,6 +30,7 @@ public class battle_start : menuScript
             setting.SetActive(false);
             battleMap.SetActive(true);
             breakScene.StartCoroutine("BreakStart");
+            tm.set();
         }
         else
         {
