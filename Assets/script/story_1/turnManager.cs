@@ -83,21 +83,44 @@ public class turnManager : MonoBehaviour
                     GameObject _turn = Instantiate(f_Icon[x[0]], bacePos, Quaternion.identity);
                     turnList.Add(_turn);
                     bacePos += addPos;
+                    count++;
+                    //break;
                 }
                 else
                 {
                     GameObject _tum_e = Instantiate(e_Icon[x[0] * -1], bacePos, Quaternion.identity);
                     turnList.Add(_tum_e);
                     bacePos += addPos;
+                    count++;
                 }
-                count++;
             }
         }
     }
 
     private void Update()
     {
-        //if () { }
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            if (oneFram > (sorted_speedList.Count-1)) oneFram = 0;
+
+            Debug.Log("fram= "+oneFram);
+            Debug.Log("count= "+sorted_speedList.Count);
+
+            if (sorted_speedList[oneFram][0] >= 0)
+            {
+                GameObject _turn = Instantiate(f_Icon[sorted_speedList[oneFram][0]], bacePos, Quaternion.identity);
+                turnList.Add(_turn);
+                bacePos += addPos;
+                oneFram++;
+            }
+            else
+            {
+                GameObject _tum_e = Instantiate(e_Icon[sorted_speedList[oneFram][0] * -1], bacePos, Quaternion.identity);
+                turnList.Add(_tum_e);
+                bacePos += addPos;
+                oneFram++;
+            }
+        }
 
     }
 }
