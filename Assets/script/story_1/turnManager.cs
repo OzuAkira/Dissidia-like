@@ -66,34 +66,52 @@ public class turnManager : MonoBehaviour
         while (count < 6)//‚±‚±‚ÅturnIcon‚ð•\Ž¦‚µ‚Ä‚¢‚é
         {
             Debug.Log("do while");
-            createTurnIcon();
+            foreach (var x in sorted_speedList)
+            {
+                if (count >= 6) break;
+                else
+                {
+                    Debug.Log("id=" + x[0] + "  speed=" + x[1]);
+                    if (x[0] >= 0)
+                    {
+                        GameObject _turn = Instantiate(f_Icon[x[0]], bacePos, Quaternion.identity);
+                        turnList.Add(_turn);
+                        bacePos += addPos;
+                        count++;
+                        //break;
+                    }
+                    else
+                    {
+                        GameObject _tum_e = Instantiate(e_Icon[x[0] * -1], bacePos, Quaternion.identity);
+                        turnList.Add(_tum_e);
+                        bacePos += addPos;
+                        count++;
+                    }
+                }
+            }
         }
     }
 
-    void createTurnIcon()
+    void create_a_TurnIcon()
     {
-        foreach (var x in sorted_speedList)
+        if (oneFram > (sorted_speedList.Count - 1)) oneFram = 0;
+
+        Debug.Log("fram= " + oneFram);
+        Debug.Log("count= " + sorted_speedList.Count);
+
+        if (sorted_speedList[oneFram][0] >= 0)
         {
-            if (count >= 6) break;
-            else
-            {
-                Debug.Log("id=" + x[0] + "  speed=" + x[1]);
-                if (x[0] >= 0)
-                {
-                    GameObject _turn = Instantiate(f_Icon[x[0]], bacePos, Quaternion.identity);
-                    turnList.Add(_turn);
-                    bacePos += addPos;
-                    count++;
-                    //break;
-                }
-                else
-                {
-                    GameObject _tum_e = Instantiate(e_Icon[x[0] * -1], bacePos, Quaternion.identity);
-                    turnList.Add(_tum_e);
-                    bacePos += addPos;
-                    count++;
-                }
-            }
+            GameObject _turn = Instantiate(f_Icon[sorted_speedList[oneFram][0]], bacePos, Quaternion.identity);
+            turnList.Add(_turn);
+            bacePos += addPos;
+            oneFram++;
+        }
+        else
+        {
+            GameObject _tum_e = Instantiate(e_Icon[sorted_speedList[oneFram][0] * -1], bacePos, Quaternion.identity);
+            turnList.Add(_tum_e);
+            bacePos += addPos;
+            oneFram++;
         }
     }
 
@@ -101,25 +119,7 @@ public class turnManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.F))
         {
-            if (oneFram > (sorted_speedList.Count-1)) oneFram = 0;
-
-            Debug.Log("fram= "+oneFram);
-            Debug.Log("count= "+sorted_speedList.Count);
-
-            if (sorted_speedList[oneFram][0] >= 0)
-            {
-                GameObject _turn = Instantiate(f_Icon[sorted_speedList[oneFram][0]], bacePos, Quaternion.identity);
-                turnList.Add(_turn);
-                bacePos += addPos;
-                oneFram++;
-            }
-            else
-            {
-                GameObject _tum_e = Instantiate(e_Icon[sorted_speedList[oneFram][0] * -1], bacePos, Quaternion.identity);
-                turnList.Add(_tum_e);
-                bacePos += addPos;
-                oneFram++;
-            }
+            create_a_TurnIcon();
         }
 
     }
