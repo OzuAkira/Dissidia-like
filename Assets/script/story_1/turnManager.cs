@@ -12,7 +12,6 @@ public class turnManager : MonoBehaviour
     [SerializeField] enemyTable enemyTable;
     [SerializeField] Vector2 bacePos , addPos;
     [SerializeField] GameObject[] f_Icon , e_Icon;
-    private int count = 0;
 
     private List<GameObject> turnList = new List<GameObject>();
 
@@ -26,7 +25,7 @@ public class turnManager : MonoBehaviour
     
     public void set()//コルーチン等で実行するタイミングを測る
     {
-        Debug.Log("start");
+        
             f_NumberSetting = gameObject.GetComponent<F_numberSetting>();
             for (int i = 0; i < f_NumberSetting.num_id_cha.Length; i++)
             {
@@ -46,7 +45,7 @@ public class turnManager : MonoBehaviour
 
             }
             int ii = 0;
-           foreach (enemy_parameters y in enemyTable.story1_enemyDB)
+           foreach (enemy_parameters y in enemyTable._enemyDB)
                 {
                     ii--;//エネミーのIDは負の値で分岐させる
                     id_speed.Add(ii);
@@ -55,40 +54,20 @@ public class turnManager : MonoBehaviour
                     id_speed = new List<int>();
                } 
            sorted_speedList = speedList.OrderByDescending(item => item[1]).ToList();
-        StartCoroutine( firstIcon());
+        StartCoroutine( firstIcon());//後で消す
         }
     
     
 
-    public IEnumerator firstIcon()
+    public IEnumerator firstIcon()//恐らくVoidになりそう
     {
-        yield return new WaitForSeconds(4);
-        while (count < 6)//ここでturnIconを表示している
+        Debug.Log("start");
+        int _count = 0;
+        yield return new WaitForSeconds(3);
+        while(_count < 6)
         {
-            Debug.Log("do while");
-            foreach (var x in sorted_speedList)
-            {
-                if (count >= 6) break;
-                else
-                {
-                    Debug.Log("id=" + x[0] + "  speed=" + x[1]);
-                    if (x[0] >= 0)
-                    {
-                        GameObject _turn = Instantiate(f_Icon[x[0]], bacePos, Quaternion.identity);
-                        turnList.Add(_turn);
-                        bacePos += addPos;
-                        count++;
-                        //break;
-                    }
-                    else
-                    {
-                        GameObject _tum_e = Instantiate(e_Icon[x[0] * -1], bacePos, Quaternion.identity);
-                        turnList.Add(_tum_e);
-                        bacePos += addPos;
-                        count++;
-                    }
-                }
-            }
+            create_a_TurnIcon();
+            _count++;
         }
     }
 

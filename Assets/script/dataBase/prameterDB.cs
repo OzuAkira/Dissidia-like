@@ -30,9 +30,7 @@ public class prameterDB : MonoBehaviour
     [CreateAssetMenu(menuName ="Enemy_table")]
     public class enemyTable : ScriptableObject
     {
-        public List<enemy_parameters> story1_enemyDB;
-        public List<enemy_parameters> story2_enemyDB;
-        public List<enemy_parameters> story3_enemyDB;
+        public List<enemy_parameters> _enemyDB;
     }
     [System.Serializable]
     public class enemy_parameters
@@ -45,6 +43,26 @@ public class prameterDB : MonoBehaviour
         public int defense;
         public int speed;
         public Sprite EnemyImage;
+    }
+
+    [CreateAssetMenu(menuName = "abilityList")]
+    public class abilityList : ScriptableObject
+    {
+        public List<playerAbility> playerAbilities;
+    }
+    [System.Serializable]
+    public  class playerAbility
+    {
+        public int character_id;
+        public string character_name;
+        public Sprite charaImage;
+
+        public abilities ability1;
+        public abilities ability2;
+        public abilities exAbility;
+        public abilities fieldAbility;
+        public abilities hyperAbility;
+        public abilities ultimateAbility;
     }
     
 }
