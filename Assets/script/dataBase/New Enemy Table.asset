@@ -21,11 +21,3 @@ MonoBehaviour:
     defense: 100
     speed: 10
     EnemyImage: {fileID: 0}
-  - Enemy_id: 0
-    Enemy_name: 
-    HP: 0
-    MP: 0
-    attack: 0
-    defense: 0
-    speed: 0
-    EnemyImage: {fileID: 0}

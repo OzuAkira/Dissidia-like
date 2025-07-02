@@ -87,6 +87,7 @@ public class turnManager : MonoBehaviour
         }
         else
         {
+            Debug.Log(sorted_speedList[oneFram][0]);
             GameObject _tum_e = Instantiate(e_Icon[sorted_speedList[oneFram][0] * -1], bacePos, Quaternion.identity);
             turnList.Add(_tum_e);
             bacePos += addPos;
