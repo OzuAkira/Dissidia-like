@@ -12,14 +12,20 @@ MonoBehaviour:
   m_Script: {fileID: 0}
   m_Name: New Enemy Table
   m_EditorClassIdentifier: Assembly-CSharp::prameterDB/enemyTable
-  story1_enemyDB:
+  _enemyDB:
   - Enemy_id: 1
     Enemy_name: "\u30C9\u30E9\u30B4\u30F3"
-    HP: 2000000
+    HP: 100
+    MP: 0
+    attack: 0
+    defense: 100
+    speed: 10
+    EnemyImage: {fileID: 0}
+  - Enemy_id: 0
+    Enemy_name: 
+    HP: 0
     MP: 0
     attack: 0
     defense: 0
-    speed: 100
-    EnemyImage: {fileID: 21300000, guid: 3c05a6e5711e1c74b8dba5f6ed80b010, type: 3}
-  story2_enemyDB: []
-  story3_enemyDB: []
+    speed: 0
+    EnemyImage: {fileID: 0}
