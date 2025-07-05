@@ -11,8 +11,5 @@ public class damage : MonoBehaviour
     {
         enemyTable._enemyDB[target].HP -= damage; 
     }
-    /*IEnumerator totaleDamage(int t , int d)
-    {
-
-    }*/
+    
 }
