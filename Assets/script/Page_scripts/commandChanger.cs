@@ -5,20 +5,18 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class B_Arrow : MonoBehaviour
+public class commandChanger : MonoBehaviour
 {
-    Arrow _arrow;
+    BattleArrow _arrow;
     public void UpdateList(Transform center)
     {
-        _arrow = gameObject.GetComponent<Arrow>();
+        _arrow = gameObject.GetComponent<BattleArrow>();
         
-        Transform childObj;
-        menuScript mS;
+        GameObject childObj;
         for(int i = 1; i <= center.childCount; i++)
         {
-            childObj = center.GetChild(i-1);
-            mS = childObj.GetComponent<menuScript>();
-            _arrow.menu[i] = mS;
+            childObj = center.GetChild(i-1).gameObject;
+            _arrow.menu[i] = childObj;
         }
         
     }
