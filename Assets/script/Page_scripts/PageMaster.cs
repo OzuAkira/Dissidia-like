@@ -11,7 +11,7 @@ public class PageMaster : MonoBehaviour
     public int fps = 60;
     public float MpF = 16f;
     public GameObject cursor;
-    public B_Arrow B_Arrow;
+    public commandChanger B_Arrow;
     private GameObject _;
 
     private void Awake()
