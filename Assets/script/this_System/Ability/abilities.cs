@@ -8,5 +8,7 @@ public abstract class abilities : MonoBehaviour
     public int ability_remainder;
     public string weapon_type;//int‚Å‚à—Ç‚¢
 
-    public abstract void Attack();
+    public abstract void Attack(int target);
+
+    public abstract void information();
 }
