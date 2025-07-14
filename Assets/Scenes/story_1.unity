@@ -5250,7 +5250,7 @@ MonoBehaviour:
   - {fileID: 1819772693}
   - {fileID: 1800495151}
   - {fileID: 1002145026}
-  character_Table: {fileID: 11400000, guid: 35d788de88ddcba45acfd8ca87894e64, type: 2}
+  character_Table: {fileID: 0}
   _obj: {fileID: 1165108174}
 --- !u!114 &1309063682
 MonoBehaviour:
