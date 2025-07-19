@@ -64,7 +64,19 @@ public class prameterDB : MonoBehaviour
         public abilities hyperAbility;
         public abilities ultimateAbility;
     }
-    
+
+    [CreateAssetMenu(menuName = "buffList")]
+    public class buffList : ScriptableObject
+    {
+        public List<playerBuff> playerBuff;
+    }
+    [System.Serializable]
+    public class playerBuff
+    {
+        //public string buff_name;
+        public Image buff_icon;
+    }
+
 }
 
 
