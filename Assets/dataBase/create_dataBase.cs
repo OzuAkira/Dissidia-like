@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-[CreateAssetMenu(fileName = "CharactorAsset", menuName = "MyAssets/CharactorAssetAsset")]
+[CreateAssetMenu(fileName = "CharactorAsset", menuName = "MyAssets/CharactorAsset")]
 public class create_dataBase : ScriptableObject
 {
     public string CharactorID;

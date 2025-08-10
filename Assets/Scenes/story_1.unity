@@ -187,12 +187,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   OffImage: {fileID: 0}
   OnImage: {fileID: 0}
+  _image: {fileID: 0}
+  gpos: {x: 0, y: 0, z: 0}
   gm: {fileID: 1309063677}
   setting: {fileID: 796586273}
   battleMap: {fileID: 1627277049}
   breakScene: {fileID: 413513438}
-  tm: {fileID: 1309063682}
+  tm: {fileID: 0}
   _min: 1
+  f_NumberSetting: {fileID: 0}
   battleMember:
   - Character_id: 0
     Character_name: 
@@ -499,6 +502,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   OffImage: {fileID: 0}
   OnImage: {fileID: 0}
+  _image: {fileID: 0}
+  gpos: {x: 0, y: 0, z: 0}
   cObject: {fileID: 1652095058}
   gm: {fileID: 1309063677}
 --- !u!1 &97404247 stripped
@@ -822,10 +827,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 882306dd287d54d49aa4440d41a14099, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spriteRenderer: {fileID: 0}
   doFrame: 1
   imege_on: {fileID: 21300000, guid: d9500b9adb8eaf841baaa433cfe80ae8, type: 3}
   imege_off: {fileID: 21300000, guid: ba2fb9c78df74114e86be81c0782338e, type: 3}
   _walk: 0
+  i: 0
+  _vector2: {x: 0, y: 0}
 --- !u!1 &231807499
 GameObject:
   m_ObjectHideFlags: 0
@@ -1072,9 +1080,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   OffImage: {fileID: 0}
   OnImage: {fileID: 0}
+  _image: {fileID: 0}
+  gpos: {x: 0, y: 0, z: 0}
   characterList: {fileID: 1687885046}
   gm: {fileID: 1309063677}
   mylist: {fileID: 982022631}
+  image: {fileID: 0}
   favour_number: 2
   character_Table: {fileID: 11400000, guid: e783c670df77be74282a6322f85c14f4, type: 2}
 --- !u!1 &279896178 stripped
@@ -1601,6 +1612,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   OffImage: {fileID: 0}
   OnImage: {fileID: 0}
+  _image: {fileID: 0}
+  gpos: {x: 0, y: 0, z: 0}
   cObject: {fileID: 1652095058}
   gm: {fileID: 1309063677}
 --- !u!114 &405294376
@@ -1712,6 +1725,7 @@ MonoBehaviour:
   explodeVel: {x: 0, y: 0, z: 0.1}
   explodeForce: 200
   explodeRange: 500
+  rigidBodies: []
 --- !u!4 &413513439 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 9aeed883d8e44cf4ebaccac2d14e9cf3, type: 3}
@@ -1846,6 +1860,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   OffImage: {fileID: 0}
   OnImage: {fileID: 0}
+  _image: {fileID: 0}
+  gpos: {x: 0, y: 0, z: 0}
   cObject: {fileID: 1652095058}
   gm: {fileID: 1309063677}
 --- !u!114 &512955638
@@ -2239,6 +2255,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   OffImage: {fileID: 0}
   OnImage: {fileID: 0}
+  _image: {fileID: 0}
+  gpos: {x: 0, y: 0, z: 0}
 --- !u!114 &612778408
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3181,6 +3199,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   OffImage: {fileID: 0}
   OnImage: {fileID: 0}
+  _image: {fileID: 0}
+  gpos: {x: 0, y: 0, z: 0}
   cObject: {fileID: 1652095058}
   gm: {fileID: 1309063677}
 --- !u!114 &743335887
@@ -3370,6 +3390,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   OffImage: {fileID: 0}
   OnImage: {fileID: 0}
+  _image: {fileID: 0}
+  gpos: {x: 0, y: 0, z: 0}
   cObject: {fileID: 1652095058}
   gm: {fileID: 1309063677}
 --- !u!114 &834555871
@@ -4149,6 +4171,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   OffImage: {fileID: 0}
   OnImage: {fileID: 0}
+  _image: {fileID: 0}
+  gpos: {x: 0, y: 0, z: 0}
 --- !u!114 &1002145029
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4284,10 +4308,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 882306dd287d54d49aa4440d41a14099, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spriteRenderer: {fileID: 0}
   doFrame: 1
   imege_on: {fileID: 21300000, guid: d9500b9adb8eaf841baaa433cfe80ae8, type: 3}
   imege_off: {fileID: 21300000, guid: ba2fb9c78df74114e86be81c0782338e, type: 3}
   _walk: 0
+  i: 0
+  _vector2: {x: 0, y: 0}
 --- !u!1 &1025576836 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -6225816318827270275, guid: 9aeed883d8e44cf4ebaccac2d14e9cf3, type: 3}
@@ -4500,6 +4527,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   OffImage: {fileID: 0}
   OnImage: {fileID: 0}
+  _image: {fileID: 0}
+  gpos: {x: 0, y: 0, z: 0}
 --- !u!114 &1131564895
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4590,6 +4619,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   OffImage: {fileID: 0}
   OnImage: {fileID: 0}
+  _image: {fileID: 0}
+  gpos: {x: 0, y: 0, z: 0}
 --- !u!114 &1144392965
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4798,10 +4829,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 882306dd287d54d49aa4440d41a14099, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spriteRenderer: {fileID: 0}
   doFrame: 1
   imege_on: {fileID: 21300000, guid: d9500b9adb8eaf841baaa433cfe80ae8, type: 3}
   imege_off: {fileID: 21300000, guid: ba2fb9c78df74114e86be81c0782338e, type: 3}
   _walk: 0
+  i: 0
+  _vector2: {x: 0, y: 0}
 --- !u!1 &1241224856 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5545391426020745348, guid: 9aeed883d8e44cf4ebaccac2d14e9cf3, type: 3}
@@ -5062,6 +5096,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 466d67957c3d1f64094c38eaa6702ade, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _arrow: {fileID: 0}
 --- !u!114 &1265199748
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5142,6 +5177,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37adf53c456722d438d9c316a5f16dad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  up_count: 0
+  down_count: 0
+  right_count: 0
+  left_count: 0
+  right_trigger: 0
+  left_trigger: 0
   _cursorIndex: 0
   targetIndex: 0
   listColams: 0
@@ -5169,7 +5210,6 @@ GameObject:
   - component: {fileID: 1309063679}
   - component: {fileID: 1309063680}
   - component: {fileID: 1309063681}
-  - component: {fileID: 1309063682}
   m_Layer: 0
   m_Name: GamMaster
   m_TagString: Untagged
@@ -5211,6 +5251,7 @@ MonoBehaviour:
   MpF: 16
   cursor: {fileID: 1265199745}
   B_Arrow: {fileID: 1265199747}
+  _: {fileID: 0}
 --- !u!114 &1309063680
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5231,6 +5272,7 @@ MonoBehaviour:
   - {fileID: 1495812069}
   - {fileID: 1714994644}
   - {fileID: 278772601}
+  fs: {fileID: 0}
 --- !u!114 &1309063681
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5258,32 +5300,8 @@ MonoBehaviour:
   - {fileID: 1819772693}
   - {fileID: 1800495151}
   - {fileID: 1002145026}
+  newArrow: {fileID: 0}
   _obj: {fileID: 1165108174}
---- !u!114 &1309063682
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1309063677}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1df563d0e07670649994586610f98833, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  characterTable: {fileID: 11400000, guid: e783c670df77be74282a6322f85c14f4, type: 2}
-  enemyTable: {fileID: 11400000, guid: 598ec240b7041224ca0d094df42e1113, type: 2}
-  bacePos: {x: -1.8, y: -0.5}
-  addPos: {x: 0.19, y: 0}
-  f_Icon:
-  - {fileID: 5294511872919553202, guid: 609a7d5fd3b44bc41a51fa7120720b68, type: 3}
-  - {fileID: 3184670301710532021, guid: 908a465fb18b59741848a21f12978644, type: 3}
-  - {fileID: 5828710225723026516, guid: 23743054cda2ea64095d038e29dfef34, type: 3}
-  e_Icon:
-  - {fileID: 0}
-  - {fileID: 3467826759265624022, guid: c5642961ec8c6b64993cca740f4e3082, type: 3}
-  enemy_1: {fileID: 1345925997}
-  enemy_2: {fileID: 1251946225}
 --- !u!1 &1322931822
 GameObject:
   m_ObjectHideFlags: 0
@@ -5802,9 +5820,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   OffImage: {fileID: 0}
   OnImage: {fileID: 0}
+  _image: {fileID: 0}
+  gpos: {x: 0, y: 0, z: 0}
   characterList: {fileID: 1687885046}
   gm: {fileID: 1309063677}
   mylist: {fileID: 982022631}
+  image: {fileID: 0}
   favour_number: 0
   character_Table: {fileID: 11400000, guid: e783c670df77be74282a6322f85c14f4, type: 2}
 --- !u!1 &1563179713 stripped
@@ -6025,6 +6046,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   OffImage: {fileID: 21300000, guid: 4a610086050875a49a823dcd06c9b11a, type: 3}
   OnImage: {fileID: 21300000, guid: c2b923ae9d6980c4aa9231028a1c2b02, type: 3}
+  _image: {fileID: 0}
+  gpos: {x: 0, y: 0, z: 0}
   Master: {fileID: 1309063679}
   _Image: {fileID: 1591164615}
   _Sprite: {fileID: 21300000, guid: 4a610086050875a49a823dcd06c9b11a, type: 3}
@@ -6187,6 +6210,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a7534c2bc0c1974f8cf57d7fe5decc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  right: 0
+  left: 0
+  up: 0
+  down: 0
   menus:
   - {fileID: 89383786}
   - {fileID: 743335886}
@@ -6455,9 +6482,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   OffImage: {fileID: 0}
   OnImage: {fileID: 0}
+  _image: {fileID: 0}
+  gpos: {x: 0, y: 0, z: 0}
   characterList: {fileID: 1687885046}
   gm: {fileID: 1309063677}
   mylist: {fileID: 982022631}
+  image: {fileID: 0}
   favour_number: 1
   character_Table: {fileID: 11400000, guid: e783c670df77be74282a6322f85c14f4, type: 2}
 --- !u!1 &1732734477
@@ -6550,6 +6580,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   OffImage: {fileID: 21300000, guid: 4a610086050875a49a823dcd06c9b11a, type: 3}
   OnImage: {fileID: 21300000, guid: c2b923ae9d6980c4aa9231028a1c2b02, type: 3}
+  _image: {fileID: 0}
+  gpos: {x: 0, y: 0, z: 0}
   Master: {fileID: 1309063679}
   _Image: {fileID: 1732734480}
   _Sprite: {fileID: 21300000, guid: 4a610086050875a49a823dcd06c9b11a, type: 3}
@@ -6854,6 +6886,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   OffImage: {fileID: 0}
   OnImage: {fileID: 0}
+  _image: {fileID: 0}
+  gpos: {x: 0, y: 0, z: 0}
 --- !u!114 &1800495154
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6944,6 +6978,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   OffImage: {fileID: 0}
   OnImage: {fileID: 0}
+  _image: {fileID: 0}
+  gpos: {x: 0, y: 0, z: 0}
 --- !u!114 &1819772696
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7235,6 +7271,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   OffImage: {fileID: 0}
   OnImage: {fileID: 0}
+  _image: {fileID: 0}
+  gpos: {x: 0, y: 0, z: 0}
   cObject: {fileID: 1652095058}
   gm: {fileID: 1309063677}
 --- !u!114 &1993692494
