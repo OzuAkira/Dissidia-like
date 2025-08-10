@@ -56,19 +56,31 @@ public class turnManager : MonoBehaviour
            sorted_speedList = speedList.OrderByDescending(item => item[1]).ToList();
         StartCoroutine( firstIcon());//å„Ç≈è¡Ç∑
         }
-    
-    
+
+    public GameObject enemy_1;
+    public GameObject enemy_2;
+    // Start is called before the first frame update
+    void Start()
+    {
+        enemy_1.SetActive(false);
+        enemy_2.SetActive(false);
+    }
 
     public IEnumerator firstIcon()//ã∞ÇÁÇ≠VoidÇ…Ç»ÇËÇªÇ§
     {
         Debug.Log("start");
         int _count = 0;
         yield return new WaitForSeconds(3);
-        while(_count < 6)
+        enemy_1.SetActive(true);
+        enemy_2.SetActive(true);
+        yield return new WaitForSeconds(3);
+        while (_count < 6)
         {
             create_a_TurnIcon();
             _count++;
         }
+
+        
     }
 
     void create_a_TurnIcon()

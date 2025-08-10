@@ -31,6 +31,7 @@ public class battle_start : menuScript
             battleMap.SetActive(true);
             breakScene.StartCoroutine("BreakStart");
             tm.set();
+
         }
         else
         {
@@ -40,17 +41,6 @@ public class battle_start : menuScript
         
 
     }
-    /*
-    IEnumerator _battle()
-    {
-        f_NumberSetting = gm.GetComponent<F_numberSetting>();
-        foreach (parameters _DB in character_table._characterDB)
-        {
-            battleMember.Add(_DB);
-        }
-
-        battleMap.SetActive(true);
-        yield return null;
-    }
-    */
+   
+    
 }
