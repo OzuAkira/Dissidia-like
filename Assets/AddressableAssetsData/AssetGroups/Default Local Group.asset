@@ -15,13 +15,8 @@ MonoBehaviour:
   m_GroupName: Default Local Group
   m_Data:
     m_SerializedData: []
-  m_GUID: a11d23b31b8b61b43b39a9e79de477c5
-  m_SerializeEntries:
-  - m_GUID: e783c670df77be74282a6322f85c14f4
-    m_Address: Assets/script/dataBase/New Character_table.asset
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
+  m_GUID: 8d16ee36bc7716e45882a2daa0b62928
+  m_SerializeEntries: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 41a27edc0e40bb04589a24c25921840f, type: 2}
   m_SchemaSet:

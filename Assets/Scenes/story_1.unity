@@ -878,6 +878,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   OffImage: {fileID: 0}
   OnImage: {fileID: 0}
+  _image: {fileID: 0}
+  gpos: {x: 0, y: 0, z: 0}
 --- !u!114 &231807502
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1987,6 +1989,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   OffImage: {fileID: 0}
   OnImage: {fileID: 0}
+  _image: {fileID: 0}
+  gpos: {x: 0, y: 0, z: 0}
 --- !u!114 &569084890
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3747,6 +3751,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   OffImage: {fileID: 0}
   OnImage: {fileID: 0}
+  _image: {fileID: 0}
+  gpos: {x: 0, y: 0, z: 0}
 --- !u!114 &976979765
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4964,6 +4970,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   OffImage: {fileID: 0}
   OnImage: {fileID: 0}
+  _image: {fileID: 0}
+  gpos: {x: 0, y: 0, z: 0}
 --- !u!114 &1256560455
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5250,7 +5258,6 @@ MonoBehaviour:
   - {fileID: 1819772693}
   - {fileID: 1800495151}
   - {fileID: 1002145026}
-  character_Table: {fileID: 0}
   _obj: {fileID: 1165108174}
 --- !u!114 &1309063682
 MonoBehaviour:
@@ -5573,6 +5580,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   OffImage: {fileID: 0}
   OnImage: {fileID: 0}
+  _image: {fileID: 0}
+  gpos: {x: 0, y: 0, z: 0}
 --- !u!114 &1413952924
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5663,6 +5672,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   OffImage: {fileID: 0}
   OnImage: {fileID: 0}
+  _image: {fileID: 0}
+  gpos: {x: 0, y: 0, z: 0}
 --- !u!114 &1426894995
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6595,6 +6606,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   OffImage: {fileID: 0}
   OnImage: {fileID: 0}
+  _image: {fileID: 0}
+  gpos: {x: 0, y: 0, z: 0}
 --- !u!114 &1733392409
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6698,6 +6711,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   OffImage: {fileID: 0}
   OnImage: {fileID: 0}
+  _image: {fileID: 0}
+  gpos: {x: 0, y: 0, z: 0}
 --- !u!114 &1780152993
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7019,6 +7034,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   OffImage: {fileID: 0}
   OnImage: {fileID: 0}
+  _image: {fileID: 0}
+  gpos: {x: 0, y: 0, z: 0}
 --- !u!114 &1830279811
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7393,6 +7410,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   OffImage: {fileID: 0}
   OnImage: {fileID: 0}
+  _image: {fileID: 0}
+  gpos: {x: 0, y: 0, z: 0}
 --- !u!114 &2021620183
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7521,6 +7540,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   OffImage: {fileID: 0}
   OnImage: {fileID: 0}
+  _image: {fileID: 0}
+  gpos: {x: 0, y: 0, z: 0}
 --- !u!1 &2034945710 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8271034870151600087, guid: 9aeed883d8e44cf4ebaccac2d14e9cf3, type: 3}
@@ -7586,6 +7607,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   OffImage: {fileID: 0}
   OnImage: {fileID: 0}
+  _image: {fileID: 0}
+  gpos: {x: 0, y: 0, z: 0}
 --- !u!114 &2042098922
 MonoBehaviour:
   m_ObjectHideFlags: 0
