@@ -22,6 +22,31 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c75ac35ce6e756441a0b2c8dd8c12f10
+    m_Address: Assets/dataBase/indexDataBase.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ba9213d75d38bd042b1d5baa838ff3c7
+    m_Address: Assets/dataBase/charactor/koutei.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 77ce5c55937c4a2498067896433b11e1
+    m_Address: Assets/dataBase/charactor/samurai.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: cec09ea81d378cb40bfcd43dbeead3c1
+    m_Address: Assets/dataBase/charactor/touzoku.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a17c37e93b73fd74faca66da88aaa365
+    m_Address: Assets/dataBase/enemy/EnemyAsset.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 41a27edc0e40bb04589a24c25921840f, type: 2}
   m_SchemaSet:

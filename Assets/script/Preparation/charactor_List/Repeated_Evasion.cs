@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEditor.Localization.Plugins.XLIFF.V12;
 using UnityEngine;
 using UnityEngine.UI;
-using static prameterDB;
+
 
 public class Repeated_Evasion : MonoBehaviour
 {

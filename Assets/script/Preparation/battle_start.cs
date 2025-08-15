@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
-using static prameterDB;
+
 
 public class battle_start : menuScript
 {
@@ -13,7 +13,7 @@ public class battle_start : menuScript
     [SerializeField] turnManager tm ;
     public int _min = 1;
     private save_charactor_id f_NumberSetting;
-    public parameters[] battleMember = { null,null,null};
+    public string[] battleMember = { null,null,null};
 
     public override void select()
     {
