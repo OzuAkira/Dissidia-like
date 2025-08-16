@@ -67,16 +67,21 @@ public class turnManager : MonoBehaviour
     }
 
 
-    public void set()//コルーチン等で実行するタイミングを測る
+    public IEnumerator set()//コルーチン等で実行するタイミングを測る
     {
         LoadIndex();
+
         f_NumberSetting = gameObject.GetComponent<save_charactor_id>();
         int _num = 0;
+        while(indexList == null)
+        {
+            yield return null;
+        }
+        //Debug.Log(indexList[0]);
         foreach (int x in f_NumberSetting.num_id_cha)
         {
             if (x >= 0)
             {
-                
                 Load_charactor(_num, indexList[x]);
                 _num++;
             }
