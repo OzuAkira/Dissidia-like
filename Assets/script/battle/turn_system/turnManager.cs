@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -24,32 +25,40 @@ public class turnManager : MonoBehaviour
 
     public List<List<int>> sorted_speedList = new List<List<int>>();
 
-    private List<string> indexList;
+    private List<string> indexList = new List<string>();
+    int enemySpeed;
+
    // private enemy enemy;
 
     async void LoadIndex()
     {
-        indexDataBase AssetsIndex = await Addressables.LoadAssetAsync<indexDataBase>("Assets/dataBase/indexDataBase").Task;
 
+        indexDataBase AssetsIndex = await Addressables.LoadAssetAsync<indexDataBase>("Assets/dataBase/indexDataBase.asset").Task;
+        Debug.Log("assetIndex = "+AssetsIndex.index);
         indexList = AssetsIndex.index;
-
         Addressables.Release(AssetsIndex);
 
-        indexDataBase enemyDataBase = await Addressables.LoadAssetAsync<indexDataBase>("Assets / dataBase / enemy / EnemyAsset").Task;
+        //今回は敵が1体だからリテラル
+        create_dataBase enemyDataBase = await Addressables.LoadAssetAsync<create_dataBase>("Assets/dataBase/enemy/EnemyAsset.asset").Task;
+        enemySpeed = enemyDataBase.speed;
 
-     //   enemy = enemyDataBase.enemies[0];
+        id_speed.Add(-1);//x.Character_id);
+        id_speed.Add(enemySpeed);
+        speedList.Add(id_speed);
+        id_speed = new List<int>();
 
-        Addressables.Release(AssetsIndex);
-
+        Addressables.Release(enemyDataBase);
     }
 
-    async void Load_charactor(string assetAddress)
+    async void Load_charactor(int num , string assetAddress)
     {
+        
+
         string BASE_ADDRESS = "Assets/dataBase/charactor";
-        string _address = $"{BASE_ADDRESS}/{assetAddress}";
+        string _address = $"{BASE_ADDRESS}/{assetAddress}.asset";
         create_dataBase charactorAsset = await Addressables.LoadAssetAsync<create_dataBase>(_address).Task;
 
-        id_speed.Add(int.Parse(charactorAsset.ID));//x.Character_id);
+        id_speed.Add(num);//x.Character_id);
         id_speed.Add(charactorAsset.speed);
         speedList.Add(id_speed);
         id_speed = new List<int>();
@@ -60,15 +69,17 @@ public class turnManager : MonoBehaviour
 
     public void set()//コルーチン等で実行するタイミングを測る
     {
-
+        LoadIndex();
         f_NumberSetting = gameObject.GetComponent<save_charactor_id>();
+        int _num = 0;
         foreach (int x in f_NumberSetting.num_id_cha)
         {
-            //Debug.Log(i);
-            if (x <= indexList.Count())
-                Load_charactor(indexList[x]);
-            else if (x >= indexList.Count() * -1 && x < 0)
-                Load_charactor(indexList[x * -1]);
+            if (x >= 0)
+            {
+                
+                Load_charactor(_num, indexList[x]);
+                _num++;
+            }
         }
 
 
@@ -89,8 +100,9 @@ public class turnManager : MonoBehaviour
             speedList.Add(id_speed);
             id_speed = new List<int>();
         }
+        */
         sorted_speedList = speedList.OrderByDescending(item => item[1]).ToList();
-        StartCoroutine(firstIcon());//後で消す*/
+        StartCoroutine(firstIcon());//後で消す
     }
 
     public GameObject enemy_1;

@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 0}
   m_Name: EnemyAsset
   m_EditorClassIdentifier: Assembly-CSharp::enemy_dataBase
-  ID: 
-  Name: 
+  ID: 1
+  Name: a
   HP: 0
   attack: 0
   defense: 0

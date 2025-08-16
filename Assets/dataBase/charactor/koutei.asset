@@ -12,10 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fcc02c562fe0f324b9f26553c29df3f1, type: 3}
   m_Name: koutei
   m_EditorClassIdentifier: 
-  CharactorID: 2
-  CharactorName: koutei
+  ID: 
+  Name: 
   HP: 0
   attack: 0
   defense: 0
   speed: 0
+  Icon: {fileID: 21300000, guid: bc252a1bc1689784cbec5626344311c1, type: 3}
   image: []

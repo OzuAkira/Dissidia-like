@@ -18,5 +18,5 @@ MonoBehaviour:
   attack: 0
   defense: 0
   speed: 0
-  Icon: {fileID: 0}
+  Icon: {fileID: 21300000, guid: 6a50730661b73794f8d64ec0bda5b429, type: 3}
   image: []
