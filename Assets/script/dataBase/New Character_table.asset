@@ -21,6 +21,7 @@ MonoBehaviour:
     defense: 0
     speed: 0
     characterIcon: {fileID: 21300000, guid: 189ea4eba5f4fd242b5f66e52e38832c, type: 3}
+    image: {fileID: 21300000, guid: d9500b9adb8eaf841baaa433cfe80ae8, type: 3}
   - Character_id: 1
     Character_name: masa
     HP: 0
@@ -29,6 +30,7 @@ MonoBehaviour:
     defense: 0
     speed: 1
     characterIcon: {fileID: 21300000, guid: ba2fb9c78df74114e86be81c0782338e, type: 3}
+    image: {fileID: 21300000, guid: ba2fb9c78df74114e86be81c0782338e, type: 3}
   - Character_id: 2
     Character_name: abt
     HP: 0
@@ -37,6 +39,7 @@ MonoBehaviour:
     defense: 0
     speed: 10
     characterIcon: {fileID: 21300000, guid: 4a610086050875a49a823dcd06c9b11a, type: 3}
+    image: {fileID: 0}
   - Character_id: 3
     Character_name: map
     HP: 0
@@ -45,6 +48,7 @@ MonoBehaviour:
     defense: 0
     speed: 3
     characterIcon: {fileID: 21300000, guid: efd1fbc3ea664d94d9ee92e67b9fa31a, type: 3}
+    image: {fileID: 0}
   - Character_id: 4
     Character_name: story
     HP: 0
@@ -53,6 +57,7 @@ MonoBehaviour:
     defense: 0
     speed: 1
     characterIcon: {fileID: 21300000, guid: 0bcb2ee03a3680c43ac8323c4edaec50, type: 3}
+    image: {fileID: 0}
   - Character_id: 5
     Character_name: "\u7687\u5E1D"
     HP: 0
@@ -61,3 +66,4 @@ MonoBehaviour:
     defense: 0
     speed: 100
     characterIcon: {fileID: 21300000, guid: bc252a1bc1689784cbec5626344311c1, type: 3}
+    image: {fileID: 21300000, guid: 3c05a6e5711e1c74b8dba5f6ed80b010, type: 3}

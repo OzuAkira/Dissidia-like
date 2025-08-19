@@ -22,6 +22,7 @@ public class prameterDB : MonoBehaviour
         public int defense;
         public int speed;
         public Sprite characterIcon;
+        public Sprite image;
     }
 
 
