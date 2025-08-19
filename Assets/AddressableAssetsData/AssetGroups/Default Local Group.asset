@@ -47,6 +47,21 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 45e55edbcbbbb1f4397a68ddfd4aba3b
+    m_Address: Assets/dataBase/charactor/kishi.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f3a0135463db14343b34f1ef0ec865b4
+    m_Address: Assets/dataBase/charactor/kaihuku.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e18836cd1ab90ff468d847fcde954752
+    m_Address: Assets/dataBase/charactor/voltage.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 41a27edc0e40bb04589a24c25921840f, type: 2}
   m_SchemaSet:

@@ -39,10 +39,12 @@ public class turnManager : MonoBehaviour
         Addressables.Release(AssetsIndex);
 
         //今回は敵が1体だからリテラル
-        create_dataBase enemyDataBase = await Addressables.LoadAssetAsync<create_dataBase>("Assets/dataBase/enemy/EnemyAsset.asset").Task;
+        enemy_dataBase enemyDataBase = await Addressables.LoadAssetAsync<enemy_dataBase>("Assets/dataBase/enemy/EnemyAsset.asset").Task;
         enemySpeed = enemyDataBase.speed;
 
-        id_speed.Add(-1);//x.Character_id);
+        Debug.Log("enemy_add");
+
+        id_speed.Add(-1);//リテラル
         id_speed.Add(enemySpeed);
         speedList.Add(id_speed);
         id_speed = new List<int>();
@@ -66,48 +68,43 @@ public class turnManager : MonoBehaviour
         Addressables.Release(charactorAsset);
     }
 
-
-    public IEnumerator set()//コルーチン等で実行するタイミングを測る
+    IEnumerator loop()
     {
-        LoadIndex();
+        
 
         f_NumberSetting = gameObject.GetComponent<save_charactor_id>();
+        int[] charactorID = f_NumberSetting.num_id_cha;
         int _num = 0;
-        while(indexList == null)
+        while (!indexList.Any())
         {
             yield return null;
+            Debug.Log("nullList");
         }
-        //Debug.Log(indexList[0]);
-        foreach (int x in f_NumberSetting.num_id_cha)
+        Debug.Log("indexList= " + indexList[0]);
+        foreach (var indexNum in charactorID)
         {
-            if (x >= 0)
+
+            if (indexNum < indexList.Count && indexNum >= 0)
             {
-                Load_charactor(_num, indexList[x]);
-                _num++;
+               
+                Load_charactor(_num, indexList[indexNum]);
             }
+            Debug.Log("indexNum= " + indexNum);
+            _num++;
         }
-
-
-
-
-
-
-
-
-
-        /*
-        int ii = 0;
-        foreach (enemy_parameters y in enemyTable._enemyDB)
+        Debug.Log("speedlistに要素が入っている？"+speedList.Any());
+        foreach(var i in speedList)
         {
-            ii--;//エネミーのIDは負の値で分岐させる
-            id_speed.Add(ii);
-            id_speed.Add(y.speed);
-            speedList.Add(id_speed);
-            id_speed = new List<int>();
+            Debug.Log("speedList[0] = "+i[0] + "speedList[1] = " + i[1]);
         }
-        */
         sorted_speedList = speedList.OrderByDescending(item => item[1]).ToList();
         StartCoroutine(firstIcon());//後で消す
+    }
+    public void set()//コルーチン等で実行するタイミングを測る
+    {
+        LoadIndex();
+        Debug.Log("set start");
+        StartCoroutine("loop");
     }
 
     public GameObject enemy_1;
@@ -148,7 +145,7 @@ public class turnManager : MonoBehaviour
             GameObject _turn = Instantiate(f_Icon[sorted_speedList[oneFram][0]], bacePos, Quaternion.identity);
             turnList.Add(_turn);
             bacePos += addPos;
-            oneFram++;
+            
         }
         else
         {
@@ -156,8 +153,8 @@ public class turnManager : MonoBehaviour
             GameObject _tum_e = Instantiate(e_Icon[sorted_speedList[oneFram][0] * -1], bacePos, Quaternion.identity);
             turnList.Add(_tum_e);
             bacePos += addPos;
-            oneFram++;
         }
+        oneFram++;
     }
 
     private void Update()
