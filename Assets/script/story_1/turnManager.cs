@@ -4,6 +4,7 @@ using System.Linq;
 using Unity.VisualScripting;
 using UnityEngine;
 using static prameterDB;
+//このファイルは、敵出現演出の時間を調整するスクリプト
 
 public class turnManager : MonoBehaviour
 {
@@ -65,7 +66,8 @@ public class turnManager : MonoBehaviour
         enemy_1.SetActive(false);
         enemy_2.SetActive(false);
     }
-
+    int now_turn;
+    public GameObject command;
     public IEnumerator firstIcon()//恐らくVoidになりそう
     {
         Debug.Log("start");
@@ -79,8 +81,8 @@ public class turnManager : MonoBehaviour
             create_a_TurnIcon();
             _count++;
         }
-
-        
+        yield return new WaitForSeconds(3);
+        command.SetActive(true);
     }
 
     void create_a_TurnIcon()

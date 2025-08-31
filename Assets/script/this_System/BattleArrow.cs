@@ -107,9 +107,14 @@ public class BattleArrow : MonoBehaviour
         foreach (var Table in objects)
         {
             if (Index == i)
-                moveObj.transform.localPosition = Table.transform.localPosition + plusPos;
-            
+            {
+                if (i == 1 || i == 2 || i == 3 || i == 4) plusPos = new Vector3(-1000,0,0);
+                else plusPos = new Vector3(0,0,0);
+
+                    moveObj.transform.localPosition = Table.transform.localPosition + plusPos;
+            }
             i++;
+
         }
     }
 
