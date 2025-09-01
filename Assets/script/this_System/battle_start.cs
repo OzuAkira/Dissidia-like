@@ -16,7 +16,7 @@ public class battle_start : menuScript
     private F_numberSetting f_NumberSetting;
     public parameters[] battleMember = { null,null,null};
 
-    public override void select()
+    public override void select(int _)
     {
         int _count = 0;
         int index = 0;
