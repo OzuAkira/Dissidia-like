@@ -13,11 +13,11 @@ public class select_command : MonoBehaviour
     {
         RectTransform rect = gameObject.GetComponent<RectTransform>();
 
-        while (rect.anchoredPosition.x >= 1000)
+        while (rect.anchoredPosition.x > 1000)
         {
             Vector2 pos = rect.anchoredPosition;
 
-            pos.x -= 3;
+            pos.x -= 90;
 
             rect.anchoredPosition = pos;
 

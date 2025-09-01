@@ -34,8 +34,8 @@ public class battle_start : menuScript
                 {
                     if (charaElement.Character_id == x)
                     {
-                        float x_pos = 1.5f;
-                        float z_pos = 0f;
+                        float x_pos = 0.7f;
+                        float z_pos = 0.001f;
                         GameObject Obj;
                         SpriteRenderer _spriteRenderer;
                         switch (index) { 
