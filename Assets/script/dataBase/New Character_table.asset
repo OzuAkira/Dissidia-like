@@ -20,6 +20,7 @@ MonoBehaviour:
     attack: 0
     defense: 0
     speed: 0
+    element: 00000000000000000000000000000000000000000000000000000000
     characterIcon: {fileID: 21300000, guid: 189ea4eba5f4fd242b5f66e52e38832c, type: 3}
     image: {fileID: 21300000, guid: d9500b9adb8eaf841baaa433cfe80ae8, type: 3}
   - Character_id: 1
@@ -29,6 +30,7 @@ MonoBehaviour:
     attack: 0
     defense: 0
     speed: 1
+    element: 00000000000000000000000000000000000000000000000000000000
     characterIcon: {fileID: 21300000, guid: ba2fb9c78df74114e86be81c0782338e, type: 3}
     image: {fileID: 21300000, guid: ba2fb9c78df74114e86be81c0782338e, type: 3}
   - Character_id: 2
@@ -38,6 +40,7 @@ MonoBehaviour:
     attack: 0
     defense: 0
     speed: 10
+    element: 00000000000000000000000000000000000000000000000000000000
     characterIcon: {fileID: 21300000, guid: 4a610086050875a49a823dcd06c9b11a, type: 3}
     image: {fileID: 0}
   - Character_id: 3
@@ -47,6 +50,7 @@ MonoBehaviour:
     attack: 0
     defense: 0
     speed: 3
+    element: 00000000000000000000000000000000000000000000000000000000
     characterIcon: {fileID: 21300000, guid: efd1fbc3ea664d94d9ee92e67b9fa31a, type: 3}
     image: {fileID: 0}
   - Character_id: 4
@@ -56,6 +60,7 @@ MonoBehaviour:
     attack: 0
     defense: 0
     speed: 1
+    element: 00000000000000000000000000000000000000000000000000000000
     characterIcon: {fileID: 21300000, guid: 0bcb2ee03a3680c43ac8323c4edaec50, type: 3}
     image: {fileID: 0}
   - Character_id: 5
@@ -65,5 +70,6 @@ MonoBehaviour:
     attack: 0
     defense: 0
     speed: 100
+    element: 00000000000000000000000000000000000000000000000000000000
     characterIcon: {fileID: 21300000, guid: bc252a1bc1689784cbec5626344311c1, type: 3}
     image: {fileID: 21300000, guid: 6330af7d2d7c81945bcddb2cf44d90df, type: 3}

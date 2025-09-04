@@ -14,10 +14,32 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::prameterDB/enemyTable
   _enemyDB:
   - Enemy_id: 1
-    Enemy_name: dragob
+    Enemy_name: 
+    HP: 10
+    MP: 0
+    attack: 0
+    defense: 0
+    speed: 50
+    element: 00000000000000000000000000000000000000000000000000000000
+    abilities: []
+    EnemyImage: {fileID: 0}
+  - Enemy_id: 1
+    Enemy_name: 
     HP: 1000
-    MP: 1000
-    attack: 100
-    defense: 100
-    speed: 20
+    MP: 0
+    attack: 0
+    defense: 0
+    speed: 100
+    element: 00000000000000000000000000000000000000000000000000000000
+    abilities: []
+    EnemyImage: {fileID: 0}
+  - Enemy_id: 2
+    Enemy_name: 
+    HP: 10
+    MP: 0
+    attack: 0
+    defense: 0
+    speed: 50
+    element: 00000000000000000000000000000000000000000000000000000000
+    abilities: []
     EnemyImage: {fileID: 0}

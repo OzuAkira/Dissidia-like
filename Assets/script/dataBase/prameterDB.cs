@@ -21,6 +21,7 @@ public class prameterDB : MonoBehaviour
         public int attack;
         public int defense;
         public int speed;
+        public int[] element = new int[7];
         public Sprite characterIcon;
         public Sprite image;
     }
@@ -43,6 +44,8 @@ public class prameterDB : MonoBehaviour
         public int attack;
         public int defense;
         public int speed;
+        public int[] element = new int[7];
+        public abilities[] abilities;
         public Sprite EnemyImage;
     }
 

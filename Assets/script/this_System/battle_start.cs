@@ -38,23 +38,36 @@ public class battle_start : menuScript
                         float z_pos = 0.001f;
                         GameObject Obj;
                         SpriteRenderer _spriteRenderer;
+                        take_status _Status;
                         switch (index) { 
                             case 1:
                                 Obj = Instantiate(charactorObj, new Vector3(x_pos, 0.7f, z_pos), Quaternion.identity , battleMap.transform);
                                 _spriteRenderer = Obj.GetComponent<SpriteRenderer>();
                                 _spriteRenderer.sprite = charaElement.image;
+
+                                _Status = Obj.GetComponent<take_status>();
+                                _Status.set_status(index , charaElement.HP, charaElement.MP, charaElement.attack, charaElement.defense, charaElement.speed, charaElement.element);
+
                                 Obj = null;
                                 break;
                             case 2:
                                 Obj = Instantiate(charactorObj, new Vector3(x_pos, -0.05f, z_pos), Quaternion.identity, battleMap.transform);
                                 _spriteRenderer = Obj.GetComponent<SpriteRenderer>();
                                 _spriteRenderer.sprite = charaElement.image;
+
+                                _Status = Obj.GetComponent<take_status>();
+                                _Status.set_status(index, charaElement.HP, charaElement.MP, charaElement.attack, charaElement.defense, charaElement.speed, charaElement.element);
+
                                 Obj = null;
                                 break;
                             case 3:
                                 Obj = Instantiate(charactorObj, new Vector3(x_pos, -0.77f, z_pos), Quaternion.identity, battleMap.transform);
                                 _spriteRenderer = Obj.GetComponent<SpriteRenderer>();
                                 _spriteRenderer.sprite = charaElement.image;
+
+                                _Status = Obj.GetComponent<take_status>();
+                                _Status.set_status(index, charaElement.HP, charaElement.MP, charaElement.attack, charaElement.defense, charaElement.speed, charaElement.element);
+
                                 Obj = null;
                                 break;
                         }
