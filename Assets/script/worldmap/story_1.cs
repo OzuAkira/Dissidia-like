@@ -5,9 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class story_1 : menuScript
 {
-    public override void select()
+    public override void select(int _)
     {
-        Debug.Log("Farway");
+        //Debug.Log("Farway");
         StartCoroutine("Load_Scene");
     }
     IEnumerator Load_Scene()

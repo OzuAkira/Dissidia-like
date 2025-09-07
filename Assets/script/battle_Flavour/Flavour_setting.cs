@@ -19,7 +19,7 @@ public class Flavour_setting : menuScript
         characterList.SetActive(false);
         
     }
-    public override void select()
+    public override void select(int _)
     {
         StartCoroutine(number());
     }

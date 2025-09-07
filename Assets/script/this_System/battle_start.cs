@@ -6,27 +6,78 @@ using static prameterDB;
 
 public class battle_start : menuScript
 {
-    [SerializeField] GameObject gm , setting , battleMap;
+    [SerializeField] GameObject gm , setting , battleMap ,charactorObj;
    // [SerializeField] prameterDB.Character_table character_table;
     [SerializeField] breakScene breakScene ;
     [SerializeField] turnManager tm ;
+    [SerializeField] Character_table characterTable;
+
     public int _min = 1;
     private F_numberSetting f_NumberSetting;
     public parameters[] battleMember = { null,null,null};
 
-    public override void select()
+    public override void select(int _)
     {
         int _count = 0;
+        int index = 0;
+
         f_NumberSetting = gm.GetComponent<F_numberSetting>();
         foreach (int x in f_NumberSetting.num_id_cha)
         {
+            index++;
+
             if (x >= 0)
             {
                 _count++;
+
+                foreach (var charaElement in characterTable._characterDB)
+                {
+                    if (charaElement.Character_id == x)
+                    {
+                        float x_pos = 0.7f;
+                        float z_pos = 0.9f;
+                        GameObject Obj;
+                        SpriteRenderer _spriteRenderer;
+                        take_status _Status;
+                        switch (index) { 
+                            case 1:
+                                Obj = Instantiate(charactorObj, new Vector3(x_pos, 0.7f, z_pos), Quaternion.identity , battleMap.transform);
+                                _spriteRenderer = Obj.GetComponent<SpriteRenderer>();
+                                _spriteRenderer.sprite = charaElement.image;
+
+                                _Status = Obj.GetComponent<take_status>();
+                                _Status.set_status(charaElement.Character_id,index , charaElement.HP, charaElement.MP, charaElement.attack, charaElement.defense, charaElement.speed, charaElement.element);
+
+                                Obj = null;
+                                break;
+                            case 2:
+                                Obj = Instantiate(charactorObj, new Vector3(x_pos, -0.05f, z_pos), Quaternion.identity, battleMap.transform);
+                                _spriteRenderer = Obj.GetComponent<SpriteRenderer>();
+                                _spriteRenderer.sprite = charaElement.image;
+
+                                _Status = Obj.GetComponent<take_status>();
+                                _Status.set_status(charaElement.Character_id, index, charaElement.HP, charaElement.MP, charaElement.attack, charaElement.defense, charaElement.speed, charaElement.element);
+
+                                Obj = null;
+                                break;
+                            case 3:
+                                Obj = Instantiate(charactorObj, new Vector3(x_pos, -0.77f, z_pos), Quaternion.identity, battleMap.transform);
+                                _spriteRenderer = Obj.GetComponent<SpriteRenderer>();
+                                _spriteRenderer.sprite = charaElement.image;
+
+                                _Status = Obj.GetComponent<take_status>();
+                                _Status.set_status(charaElement.Character_id, index, charaElement.HP, charaElement.MP, charaElement.attack, charaElement.defense, charaElement.speed, charaElement.element);
+
+                                Obj = null;
+                                break;
+                        }
+                    }
+                }
             }
         }
         if (_count >= _min)
         {
+            
             setting.SetActive(false);
             battleMap.SetActive(true);
             breakScene.StartCoroutine("BreakStart");
@@ -38,7 +89,7 @@ public class battle_start : menuScript
             Debug.Log("キャラクターを選んでね");
             //return;
         }
-        
+
 
     }
    
