@@ -15,16 +15,6 @@ MonoBehaviour:
   _enemyDB:
   - Enemy_id: 1
     Enemy_name: 
-    HP: 10
-    MP: 0
-    attack: 0
-    defense: 0
-    speed: 50
-    element: 00000000000000000000000000000000000000000000000000000000
-    abilities: []
-    EnemyImage: {fileID: 0}
-  - Enemy_id: 1
-    Enemy_name: 
     HP: 1000
     MP: 0
     attack: 0

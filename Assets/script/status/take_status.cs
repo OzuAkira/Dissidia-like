@@ -14,6 +14,7 @@ public class take_status : MonoBehaviour
     public int now_speed;
     public int[] now_element;
     public void set_status(
+        int id,
         int battleNum ,
         int _hp ,
         int _mp ,

@@ -99,9 +99,9 @@ public class BattleArrow : MonoBehaviour
 
     public void OnFire()
     {
-        menuScript abilities = menu[_cursorIndex].GetComponent<menuScript>();
+        abilities abilities = menu[_cursorIndex].GetComponent<abilities>();
 
-        abilities.select(targetIndex);
+        abilities.Attack(targetIndex);
     }
     public void UpdateMenu(int Index , GameObject moveObj , GameObject[] objects , bool target)
     {

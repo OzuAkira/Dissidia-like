@@ -35,7 +35,7 @@ public class battle_start : menuScript
                     if (charaElement.Character_id == x)
                     {
                         float x_pos = 0.7f;
-                        float z_pos = 0.001f;
+                        float z_pos = 0.9f;
                         GameObject Obj;
                         SpriteRenderer _spriteRenderer;
                         take_status _Status;
@@ -46,7 +46,7 @@ public class battle_start : menuScript
                                 _spriteRenderer.sprite = charaElement.image;
 
                                 _Status = Obj.GetComponent<take_status>();
-                                _Status.set_status(index , charaElement.HP, charaElement.MP, charaElement.attack, charaElement.defense, charaElement.speed, charaElement.element);
+                                _Status.set_status(charaElement.Character_id,index , charaElement.HP, charaElement.MP, charaElement.attack, charaElement.defense, charaElement.speed, charaElement.element);
 
                                 Obj = null;
                                 break;
@@ -56,7 +56,7 @@ public class battle_start : menuScript
                                 _spriteRenderer.sprite = charaElement.image;
 
                                 _Status = Obj.GetComponent<take_status>();
-                                _Status.set_status(index, charaElement.HP, charaElement.MP, charaElement.attack, charaElement.defense, charaElement.speed, charaElement.element);
+                                _Status.set_status(charaElement.Character_id, index, charaElement.HP, charaElement.MP, charaElement.attack, charaElement.defense, charaElement.speed, charaElement.element);
 
                                 Obj = null;
                                 break;
@@ -66,7 +66,7 @@ public class battle_start : menuScript
                                 _spriteRenderer.sprite = charaElement.image;
 
                                 _Status = Obj.GetComponent<take_status>();
-                                _Status.set_status(index, charaElement.HP, charaElement.MP, charaElement.attack, charaElement.defense, charaElement.speed, charaElement.element);
+                                _Status.set_status(charaElement.Character_id, index, charaElement.HP, charaElement.MP, charaElement.attack, charaElement.defense, charaElement.speed, charaElement.element);
 
                                 Obj = null;
                                 break;
