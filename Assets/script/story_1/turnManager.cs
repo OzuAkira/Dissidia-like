@@ -12,7 +12,7 @@ public class turnManager : MonoBehaviour
     F_numberSetting f_NumberSetting;
     [SerializeField] Character_table characterTable;
     [SerializeField] enemyTable enemyTable;
-    [SerializeField] Vector2 bacePos , addPos;
+    [SerializeField] Vector3 bacePos , addPos;
     [SerializeField] GameObject[] f_Icon , e_Icon;
 
     private List<GameObject> turnList = new List<GameObject>();
@@ -66,11 +66,15 @@ public class turnManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Instantiate(enemy_1);
+        Instantiate(enemy_2);
+
         enemy_1.SetActive(false);
         enemy_2.SetActive(false);
     }
+    
     int now_turn;
-    public GameObject command;
+
     public IEnumerator firstIcon()//恐らくVoidになりそう
     {
         Debug.Log("start");
@@ -85,7 +89,8 @@ public class turnManager : MonoBehaviour
             _count++;
         }
         yield return new WaitForSeconds(3);
-        command.SetActive(true);
+        turn();
+        //command.SetActive(true);この部分をturn()に移動
     }
 
     void create_a_TurnIcon()
@@ -122,15 +127,27 @@ public class turnManager : MonoBehaviour
 
     }
     int turnCounter = 0;
+    [SerializeField] abilityList abilityList;
+    public Transform stage;
     void turn()
     {
         if (sorted_speedList[turnCounter][2] >= 0)
         {
-            foreach (parameters x in characterTable._characterDB)
+            foreach (var x in abilityList.playerAbilities)
             {
-                //if (x.Character_id == //アビリティデータベースのID)
+                if (sorted_speedList[turnCounter][2] == x.character_id)
+                {
+                    Debug.Log("if_in");
+                    Instantiate(x.abilities, Vector3.zero, Quaternion.identity,stage);
+                }
 
             }
+        }
+        else
+        {
+            Debug.Log("countUp!!!");
+            turnCounter++;
+            turn();
         }
     }
 }

@@ -18,6 +18,7 @@ public class BattleArrow : MonoBehaviour
 
     private void Start()
     {
+        moveTargetObject = Instantiate(moveTargetObject);
         UpdateMenu(_cursorIndex, gameObject, menu, false);
         UpdateMenu(targetIndex, moveTargetObject, enemys, true);
     }

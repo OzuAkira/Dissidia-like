@@ -60,7 +60,7 @@ public class prameterDB : MonoBehaviour
         public int character_id;
         public string character_name;
 
-        public GameObject[] abilities;
+        public GameObject abilities;
 
     }
     /*

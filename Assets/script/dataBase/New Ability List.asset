@@ -15,5 +15,10 @@ MonoBehaviour:
   playerAbilities:
   - character_id: 0
     character_name: 
-    abilities:
-    - {fileID: 0}
+    abilities: {fileID: 2304069602828015371, guid: 260b24bea42580042b05062da3cc7c31, type: 3}
+  - character_id: 1
+    character_name: 
+    abilities: {fileID: 2304069602828015371, guid: afa1f834d86b9b4428f487181573fe78, type: 3}
+  - character_id: 2
+    character_name: 
+    abilities: {fileID: 2304069602828015371, guid: 6c6dd1ccf730aee48a5149965857031d, type: 3}
