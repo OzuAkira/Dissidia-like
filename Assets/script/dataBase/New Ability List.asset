@@ -15,10 +15,5 @@ MonoBehaviour:
   playerAbilities:
   - character_id: 0
     character_name: 
-    charaImage: {fileID: 0}
-    ability1: {fileID: 0}
-    ability2: {fileID: 0}
-    exAbility: {fileID: 0}
-    fieldAbility: {fileID: 0}
-    hyperAbility: {fileID: 0}
-    ultimateAbility: {fileID: 0}
+    abilities:
+    - {fileID: 0}

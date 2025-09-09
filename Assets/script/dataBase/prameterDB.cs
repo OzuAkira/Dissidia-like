@@ -60,23 +60,20 @@ public class prameterDB : MonoBehaviour
         public int character_id;
         public string character_name;
 
-        public List<ability_infomation> ability_Infomations;
+        public GameObject[] abilities;
 
-        /*
-        public abilities fieldAbility;
-        public abilities hyperAbility;
-        public abilities ultimateAbility;
-        */
     }
+    /*
     [System.Serializable]
     public class ability_infomation
     {
-        public string ability_name;
-        public int ability_remainder;
+        public string name;
+        public int remainder;
         //public string element;
         public string weapon_type;//int‚Å‚à—Ç‚¢
         public abilities ability;
     }
+    */
 
     [CreateAssetMenu(menuName = "buffList")]
     public class buffList : ScriptableObject
