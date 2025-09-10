@@ -14,10 +14,18 @@ public class BattleArrow : MonoBehaviour
     public int listColams;
     public Vector3 plusPos = new Vector3(0f, 0, 0);
     public GameObject[] enemys , menu;
-    public GameObject moveTargetObject;
+    public GameObject moveTargetObject , GM;
 
     private void Start()
     {
+        GM = GameObject.Find("GamMaster");
+        PageMaster pageMaster = GM.GetComponent<PageMaster>();
+        commandChanger comchange = gameObject.GetComponent<commandChanger>();
+        pageMaster.cursor = gameObject;
+        pageMaster.B_Arrow = comchange;
+
+
+
         moveTargetObject = Instantiate(moveTargetObject);
         UpdateMenu(_cursorIndex, gameObject, menu, false);
         UpdateMenu(targetIndex, moveTargetObject, enemys, true);
