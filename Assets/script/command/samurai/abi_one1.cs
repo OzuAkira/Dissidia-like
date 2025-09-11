@@ -7,7 +7,6 @@ using static prameterDB;
 public class abi_one : abilities
 {
     [SerializeField] enemyTable enemyTable;
-    [SerializeField] playerAbility playerAbility;
     Text _Text;
     private void Start()
     {
@@ -23,6 +22,6 @@ public class abi_one : abilities
     }
     public override void information()
     {
-        
+        Debug.Log("Log");
     }
 }

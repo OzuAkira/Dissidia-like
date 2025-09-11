@@ -145,6 +145,17 @@ public class turnManager : MonoBehaviour
         }
         else
         {
+            foreach (var x in enemyTable._enemyDB)
+            {
+                if (sorted_speedList[turnCounter][2] * -1 == x.Enemy_id)
+                {
+                    
+                }
+
+            }
+
+
+
             Debug.Log("countUp!!!");
             turnCounter++;
             turn();
