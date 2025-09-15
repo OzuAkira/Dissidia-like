@@ -66,8 +66,8 @@ public class turnManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Instantiate(enemy_1);
-        Instantiate(enemy_2);
+        enemy_1 = Instantiate(enemy_1);
+        enemy_2 = Instantiate(enemy_2);
 
         enemy_1.SetActive(false);
         enemy_2.SetActive(false);
@@ -145,18 +145,22 @@ public class turnManager : MonoBehaviour
         }
         else
         {
-            foreach (var x in enemyTable._enemyDB)
+            if (sorted_speedList[turnCounter][1] ==  -1)
             {
-                if (sorted_speedList[turnCounter][2] * -1 == x.Enemy_id)
-                {
-                    
-                }
+                toraion abilitycs = enemy_1.GetComponent<toraion>();
+
+
+            }
+            else if(sorted_speedList[turnCounter][1] == -2)
+            {
 
             }
 
 
 
-            Debug.Log("countUp!!!");
+
+
+                Debug.Log(sorted_speedList[turnCounter][2] + "  countUp!!!");
             turnCounter++;
             turn();
         }
