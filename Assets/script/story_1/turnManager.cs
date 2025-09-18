@@ -92,7 +92,7 @@ public class turnManager : MonoBehaviour
         turn();
         //command.SetActive(true);‚±‚Ì•”•ª‚ðturn()‚ÉˆÚ“®
     }
-
+    public GameObject[] characters;
     void create_a_TurnIcon()
     {
         if (oneFram > (sorted_speedList.Count - 1)) oneFram = 0;
@@ -148,7 +148,7 @@ public class turnManager : MonoBehaviour
             if (sorted_speedList[turnCounter][1] ==  -1)
             {
                 toraion abilitycs = enemy_1.GetComponent<toraion>();
-
+                abilitycs._action(0, characters);
 
             }
             else if(sorted_speedList[turnCounter][1] == -2)
