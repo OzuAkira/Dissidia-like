@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using Unity.VisualScripting;
+using UnityEditor.Localization.Plugins.XLIFF.V12;
 using UnityEngine;
 using static prameterDB;
 //このファイルは、敵出現演出の時間を調整するスクリプト
@@ -11,7 +12,7 @@ public class turnManager : MonoBehaviour
     F_numberSetting f_NumberSetting;
     [SerializeField] Character_table characterTable;
     [SerializeField] enemyTable enemyTable;
-    [SerializeField] Vector2 bacePos , addPos;
+    [SerializeField] Vector3 bacePos , addPos;
     [SerializeField] GameObject[] f_Icon , e_Icon;
 
     private List<GameObject> turnList = new List<GameObject>();
@@ -38,6 +39,7 @@ public class turnManager : MonoBehaviour
                         //int a = x.Character_id;
                         id_speed.Add(i);//x.Character_id);
                         id_speed.Add(x.speed);
+                    id_speed.Add(x.Character_id);
                         speedList.Add(id_speed);
                         id_speed = new List<int>();
 
@@ -51,7 +53,8 @@ public class turnManager : MonoBehaviour
                     ii--;//エネミーのIDは負の値で分岐させる
                     id_speed.Add(ii);
                     id_speed.Add(y.speed);
-                    speedList.Add(id_speed);
+                id_speed.Add(y.Enemy_id * -1);
+                speedList.Add(id_speed);
                     id_speed = new List<int>();
                } 
            sorted_speedList = speedList.OrderByDescending(item => item[1]).ToList();
@@ -63,11 +66,15 @@ public class turnManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        enemy_1 = Instantiate(enemy_1);
+        enemy_2 = Instantiate(enemy_2);
+
         enemy_1.SetActive(false);
         enemy_2.SetActive(false);
     }
+    
     int now_turn;
-    public GameObject command;
+
     public IEnumerator firstIcon()//恐らくVoidになりそう
     {
         Debug.Log("start");
@@ -82,18 +89,20 @@ public class turnManager : MonoBehaviour
             _count++;
         }
         yield return new WaitForSeconds(3);
-        command.SetActive(true);
+        turn();
+        //command.SetActive(true);この部分をturn()に移動
     }
-
+    public GameObject[] characters;
     void create_a_TurnIcon()
     {
         if (oneFram > (sorted_speedList.Count - 1)) oneFram = 0;
 
-        Debug.Log("fram= " + oneFram);
-        Debug.Log("count= " + sorted_speedList.Count);
+        //Debug.Log("fram= " + oneFram);
+        
 
         if (sorted_speedList[oneFram][0] >= 0)
         {
+            Debug.Log("sortedList= " + sorted_speedList[oneFram][0]);
             GameObject _turn = Instantiate(f_Icon[sorted_speedList[oneFram][0]], bacePos, Quaternion.identity);
             turnList.Add(_turn);
             bacePos += addPos;
@@ -116,5 +125,44 @@ public class turnManager : MonoBehaviour
             create_a_TurnIcon();
         }
 
+    }
+    int turnCounter = 0;
+    [SerializeField] abilityList abilityList;
+    public Transform stage;
+    void turn()
+    {
+        if (sorted_speedList[turnCounter][2] >= 0)
+        {
+            foreach (var x in abilityList.playerAbilities)
+            {
+                if (sorted_speedList[turnCounter][2] == x.character_id)
+                {
+                    Debug.Log("if_in");
+                    Instantiate(x.abilities, Vector3.zero, Quaternion.identity,stage);
+                }
+
+            }
+        }
+        else
+        {
+            if (sorted_speedList[turnCounter][1] ==  -1)
+            {
+                toraion abilitycs = enemy_1.GetComponent<toraion>();
+                abilitycs._action(0, characters);
+
+            }
+            else if(sorted_speedList[turnCounter][1] == -2)
+            {
+
+            }
+
+
+
+
+
+                Debug.Log(sorted_speedList[turnCounter][2] + "  countUp!!!");
+            turnCounter++;
+            turn();
+        }
     }
 }

@@ -16,6 +16,9 @@ public class battle_start : menuScript
     private F_numberSetting f_NumberSetting;
     public parameters[] battleMember = { null,null,null};
 
+
+    GameObject[] Obj = new GameObject[3];
+
     public override void select(int _)
     {
         int _count = 0;
@@ -36,45 +39,49 @@ public class battle_start : menuScript
                     {
                         float x_pos = 0.7f;
                         float z_pos = 0.9f;
-                        GameObject Obj;
+                        
                         SpriteRenderer _spriteRenderer;
                         take_status _Status;
                         switch (index) { 
                             case 1:
-                                Obj = Instantiate(charactorObj, new Vector3(x_pos, 0.7f, z_pos), Quaternion.identity , battleMap.transform);
-                                _spriteRenderer = Obj.GetComponent<SpriteRenderer>();
+                                Obj[0] = Instantiate(charactorObj, new Vector3(x_pos, 0.7f, z_pos), Quaternion.identity , battleMap.transform);
+                                _spriteRenderer = Obj[0].GetComponent<SpriteRenderer>();
                                 _spriteRenderer.sprite = charaElement.image;
 
-                                _Status = Obj.GetComponent<take_status>();
+                                _Status = Obj[0].GetComponent<take_status>();
                                 _Status.set_status(charaElement.Character_id,index , charaElement.HP, charaElement.MP, charaElement.attack, charaElement.defense, charaElement.speed, charaElement.element);
 
-                                Obj = null;
+                                //Obj = null;
                                 break;
                             case 2:
-                                Obj = Instantiate(charactorObj, new Vector3(x_pos, -0.05f, z_pos), Quaternion.identity, battleMap.transform);
-                                _spriteRenderer = Obj.GetComponent<SpriteRenderer>();
+                                Obj[1] = Instantiate(charactorObj, new Vector3(x_pos, -0.05f, z_pos), Quaternion.identity, battleMap.transform);
+                                _spriteRenderer = Obj[1].GetComponent<SpriteRenderer>();
                                 _spriteRenderer.sprite = charaElement.image;
 
-                                _Status = Obj.GetComponent<take_status>();
+                                _Status = Obj[1].GetComponent<take_status>();
                                 _Status.set_status(charaElement.Character_id, index, charaElement.HP, charaElement.MP, charaElement.attack, charaElement.defense, charaElement.speed, charaElement.element);
 
-                                Obj = null;
+                                //Obj = null;
                                 break;
                             case 3:
-                                Obj = Instantiate(charactorObj, new Vector3(x_pos, -0.77f, z_pos), Quaternion.identity, battleMap.transform);
-                                _spriteRenderer = Obj.GetComponent<SpriteRenderer>();
+                                Obj[2] = Instantiate(charactorObj, new Vector3(x_pos, -0.77f, z_pos), Quaternion.identity, battleMap.transform);
+                                _spriteRenderer = Obj[2].GetComponent<SpriteRenderer>();
                                 _spriteRenderer.sprite = charaElement.image;
 
-                                _Status = Obj.GetComponent<take_status>();
+                                _Status = Obj[2].GetComponent<take_status>();
                                 _Status.set_status(charaElement.Character_id, index, charaElement.HP, charaElement.MP, charaElement.attack, charaElement.defense, charaElement.speed, charaElement.element);
 
-                                Obj = null;
+                                //Obj = null;
                                 break;
                         }
                     }
                 }
             }
         }
+
+        turnManager turnManager = gm.GetComponent<turnManager>();
+        turnManager.characters = Obj;
+
         if (_count >= _min)
         {
             
