@@ -5,7 +5,7 @@ using UnityEngine;
 public class DumyMenu : menuScript
 {
    
-    public override void select()
+    public override void select(int _)
     {
         
     }

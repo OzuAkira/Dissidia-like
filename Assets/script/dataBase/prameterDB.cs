@@ -21,7 +21,9 @@ public class prameterDB : MonoBehaviour
         public int attack;
         public int defense;
         public int speed;
+        public int[] element = new int[7];
         public Sprite characterIcon;
+        public Sprite image;
     }
 
 
@@ -42,6 +44,8 @@ public class prameterDB : MonoBehaviour
         public int attack;
         public int defense;
         public int speed;
+        public int[] element = new int[7];
+       // public abilities[] abilities;
         public Sprite EnemyImage;
     }
 
@@ -55,15 +59,21 @@ public class prameterDB : MonoBehaviour
     {
         public int character_id;
         public string character_name;
-        public Sprite charaImage;
 
-        public abilities ability1;
-        public abilities ability2;
-        public abilities exAbility;
-        public abilities fieldAbility;
-        public abilities hyperAbility;
-        public abilities ultimateAbility;
+        public GameObject abilities;
+
     }
+    /*
+    [System.Serializable]
+    public class ability_infomation
+    {
+        public string name;
+        public int remainder;
+        //public string element;
+        public string weapon_type;//int‚Å‚à—Ç‚¢
+        public abilities ability;
+    }
+    */
 
     [CreateAssetMenu(menuName = "buffList")]
     public class buffList : ScriptableObject

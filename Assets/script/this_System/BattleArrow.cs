@@ -14,11 +14,21 @@ public class BattleArrow : MonoBehaviour
     public int listColams;
     public Vector3 plusPos = new Vector3(0f, 0, 0);
     public GameObject[] enemys , menu;
-    public GameObject moveObject;
+    public GameObject moveTargetObject , GM;
 
     private void Start()
     {
-        UpdateMenu(_cursorIndex, gameObject, menu);
+        GM = GameObject.Find("GamMaster");
+        PageMaster pageMaster = GM.GetComponent<PageMaster>();
+        commandChanger comchange = gameObject.GetComponent<commandChanger>();
+        pageMaster.cursor = gameObject;
+        pageMaster.B_Arrow = comchange;
+
+
+
+        moveTargetObject = Instantiate(moveTargetObject);
+        UpdateMenu(_cursorIndex, gameObject, menu, false);
+        UpdateMenu(targetIndex, moveTargetObject, enemys, true);
     }
 
     void OnMove(InputValue iv)
@@ -31,7 +41,7 @@ public class BattleArrow : MonoBehaviour
     private void Update()
     {
         cursorControl();
-
+        targetControl();
     }
     void cursorControl()
     {
@@ -50,13 +60,14 @@ public class BattleArrow : MonoBehaviour
 
         if (_cursorIndex < 0) _cursorIndex = 0;
         if (_cursorIndex >= cursorMax) _cursorIndex = menu.Length-1;
-        if (_cursorIndex != oldCursor) UpdateMenu(_cursorIndex, gameObject , menu);
+        if (_cursorIndex != oldCursor) UpdateMenu(_cursorIndex, gameObject , menu, false);
     }
 
     void targetControl()
     {
         int oldTarget = targetIndex;
         int cursorMax = enemys.Length;
+        Debug.Log("cursorMax"+cursorMax);
         if (right_trigger)
         {
             targetIndex++;
@@ -69,7 +80,7 @@ public class BattleArrow : MonoBehaviour
         }
         if (targetIndex < 0) targetIndex = 0;
         if (targetIndex >= cursorMax) targetIndex = enemys.Length-1;
-        if (targetIndex != oldTarget) UpdateMenu(targetIndex, moveObject,enemys);
+        if (targetIndex != oldTarget) UpdateMenu(targetIndex, moveTargetObject,enemys , true);
     }
 
 
@@ -101,15 +112,21 @@ public class BattleArrow : MonoBehaviour
 
         abilities.Attack(targetIndex);
     }
-    public void UpdateMenu(int Index , GameObject moveObj , GameObject[] objects)
+    public void UpdateMenu(int Index , GameObject moveObj , GameObject[] objects , bool target)
     {
         int i = 0;
         foreach (var Table in objects)
         {
-            if (Index == i)
-                moveObj.transform.localPosition = Table.transform.localPosition + plusPos;
             
+            if (Index == i)
+            {
+                if (i == 1 || i == 2 || i == 3 || i == 4) plusPos = new Vector3(-1000,0,0);
+                else  plusPos = new Vector3(0,0,0);
+                if (target) plusPos = new Vector3(0, 0, 0);
+                moveObj.transform.localPosition = Table.transform.localPosition + plusPos;
+            }
             i++;
+
         }
     }
 

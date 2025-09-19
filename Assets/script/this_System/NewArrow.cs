@@ -63,7 +63,7 @@ public class NewArrow : MonoBehaviour
             if (_cursorIndex > menus.Length) _cursorIndex -= menuLine;
             down = false;
         }
-        else if (Input.GetKeyDown(KeyCode.Return)) menus[_cursorIndex].select();
+        else if (Input.GetKeyDown(KeyCode.Return)) menus[_cursorIndex].select(0);
   
     }
     void UpdateMenue()

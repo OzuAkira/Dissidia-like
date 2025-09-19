@@ -37,22 +37,56 @@ public class PageMaster : MonoBehaviour
             Debug.Log("_vectorがnull");
         }
     }
+    public bool Upcounter = false; public bool Downcounter = false;//3ページの場合はcounter を常にFalseに
     IEnumerator UP_ChangePage()
     {
         cursor.SetActive(false);
-        _headList.transform.position = _tailList.transform.position;
 
-        for (int i = 0; i < fps; i++)
+        _headList.transform.position = _tailList.transform.position;
+        if (Upcounter)
         {
-            _centerList.transform.localPosition += new Vector3(0, MpF, 0);
-            _tailList.transform.localPosition += new Vector3(0, MpF, 0);
-            yield return null;
+            _ = _headList;
+            _headList = _tailList;
+            _tailList = _;
+            Upcounter = false;
+            Downcounter = false;
         }
-        _ = _headList;
+        else if(Downcounter)
+        {
+            Upcounter = false;
+            Downcounter = false;
+        }
+        else
+        {
+            Upcounter = true;
+            Downcounter = false;
+        }
+            //Vector3 tailPos = _tailList.transform.position;
+
+            for (int i = 0; i < fps; i++)
+            {
+                _centerList.transform.localPosition += new Vector3(0, MpF, 0);
+                _tailList.transform.localPosition += new Vector3(0, MpF, 0);
+                yield return null;
+            }
+
+        //3ページの場合はこっち
+        
+         _ = _headList;
 
         _headList = _centerList;
         _centerList = _tailList;
         _tailList = _;
+        
+
+        //2ページの場合はこっち
+        /*
+        _headList = _centerList;
+        _centerList = _tailList;
+        _tailList = _headList;
+
+        _headList.transform.position = tailPos;
+        */
 
         cursor.SetActive(true);
 
@@ -62,7 +96,27 @@ public class PageMaster : MonoBehaviour
     IEnumerator DOWN_ChangePage()
     {
         cursor.SetActive(false);
-        _tailList.transform.position = _headList.transform.position;
+        _tailList.transform.position = _headList.transform.position; //3ページの場合はこっち
+
+        if (Downcounter)
+        {
+            _ = _headList;
+            _headList = _tailList;
+            _tailList = _;
+            //Upcounter = true;
+            Downcounter = false;
+            Upcounter = false;
+        }
+        else if(Upcounter)
+        {
+            Downcounter = false;
+            Upcounter = false;
+        }
+        else
+        {
+            Upcounter = false;
+            Downcounter = true;
+        }
 
         for (int i = 0; i < fps; i++)
         {
@@ -70,12 +124,27 @@ public class PageMaster : MonoBehaviour
             _headList.transform.localPosition += new Vector3(0, -MpF, 0);
             yield return null;
         }
-        _ = _tailList;
+
+        //3ページの場合はこっち
+
+        
+         _ = _tailList;
 
         _tailList = _centerList;
         _centerList = _headList;
         _headList = _;
         
+        
+        //2ページの場合
+
+        /*
+
+        _tailList = _centerList;
+        _centerList = _headList;
+        _headList = _tailList;
+
+        _tailList.transform.position = headPos;
+        */
 
         cursor.SetActive(true);
 

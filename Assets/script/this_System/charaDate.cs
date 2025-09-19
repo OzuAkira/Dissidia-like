@@ -7,7 +7,7 @@ public class charaDate : menuScript
     public GameObject cObject,gm;
 
 
-    public override void select()
+    public override void select(int _)
     {
         cObject = GameObject.Find("c_cursor");
         gm = GameObject.Find("GamMaster");

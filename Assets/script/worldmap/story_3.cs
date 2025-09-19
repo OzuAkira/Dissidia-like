@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class story_3 : menuScript
 {
-    public override void select()
+    public override void select(int _)
     {
         StartCoroutine("Load_S_Scene");
     }

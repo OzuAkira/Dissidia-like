@@ -62,7 +62,7 @@ public class Arrow : MonoBehaviour
         }
         else if(Input.GetKeyDown(KeyCode.Return))
         {
-            menu[_cursorIndex].select();
+            menu[_cursorIndex].select(0);
         }
 
 

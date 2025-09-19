@@ -10,7 +10,7 @@ public abstract class menuScript : MonoBehaviour
     Image _image;
     
     Vector3 gpos;
-    public abstract void select();
+    public abstract void select(int target);
     void Start()
     {
         _image = gameObject.GetComponent<Image>();
