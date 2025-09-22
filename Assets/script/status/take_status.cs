@@ -7,21 +7,21 @@ public class take_status : MonoBehaviour
 {
     [SerializeField] Character_table characterTable;
     private int index;
-    public int now_HP;
-    public int MP;
-    public int now_attack;
-    public int now_defense;
-    public int now_speed;
-    public int[] now_element;
+    public float now_HP;
+    public float MP;
+    public float now_attack;
+    public float now_defense;
+    public float now_speed;
+    public float[] now_element;
     public void set_status(
         int id,
         int battleNum ,
-        int _hp ,
-        int _mp ,
-        int _attack ,
-        int _degense ,
-        int _speed ,
-        int[] _elements )
+        float _hp ,
+        float _mp ,
+        float _attack ,
+        float _degense ,
+        float _speed ,
+        float[] _elements )
     {
         index = battleNum;
         now_HP = _hp;
