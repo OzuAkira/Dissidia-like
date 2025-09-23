@@ -12,7 +12,7 @@ public class take_status : MonoBehaviour
     public float now_attack;
     public float now_defense;
     public float now_speed;
-    public float[] now_element;
+    public int[] now_element;
     public void set_status(
         int id,
         int battleNum ,
@@ -21,7 +21,7 @@ public class take_status : MonoBehaviour
         float _attack ,
         float _degense ,
         float _speed ,
-        float[] _elements )
+        int[] _elements )
     {
         index = battleNum;
         now_HP = _hp;
