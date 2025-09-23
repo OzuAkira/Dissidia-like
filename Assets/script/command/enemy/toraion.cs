@@ -6,11 +6,15 @@ using UnityEngine;
 public class toraion : MonoBehaviour
 {
     take_status enemy_Status , character_Status;
+    [SerializeField] GameObject GM;
     float attack;
+    textManager textManager;
     private void Start()
     {
         enemy_Status = gameObject.GetComponent<take_status>();
         attack = enemy_Status.now_attack;
+        textManager = GM.GetComponent<textManager>();
+
     }
     public void _action(int num , GameObject[] targets)//難易度の分岐
     {
@@ -50,6 +54,8 @@ public class toraion : MonoBehaviour
                 character_Status = _targets[killFlag[0]].GetComponent<take_status>();
 
                 //アニメーションを入れる予定（多分コルーチンを呼ぶ）
+                //ダメージ処理も混ぜる
+                
 
                 character_Status.now_HP -= (character_Status.now_defense - attack * 1.2f);//ダメージ処理
                 break;

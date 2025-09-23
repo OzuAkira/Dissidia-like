@@ -5,7 +5,7 @@ using static prameterDB;
 
 public class take_status : MonoBehaviour
 {
-    [SerializeField] Character_table characterTable;
+    //[SerializeField] Character_table characterTable;
     private int index;
     public float now_HP;
     public float MP;
