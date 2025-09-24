@@ -21,8 +21,8 @@ public class toraion : MonoBehaviour
         switch (num)
         {
             case 0:
-                
-              
+
+                fastKill(targets);
 
 
 
@@ -45,22 +45,30 @@ public class toraion : MonoBehaviour
         {
             character_Status = chara.GetComponent<take_status>();
             float chara_defense = character_Status.now_defense;
-            if(chara_defense - attack >= character_Status.now_HP)killFlag.Add(i);
+            if(chara_defense - attack >= character_Status.now_HP)killFlag.Add(i);//一撃で倒せる奴らを探す
             i++;
         }
         switch(killFlag.Sum())
         {
             case 1:
                 character_Status = _targets[killFlag[0]].GetComponent<take_status>();
-
                 //アニメーションを入れる予定（多分コルーチンを呼ぶ）
                 //ダメージ処理も混ぜる
-                
+
+
+
+                AbilityAnime(_targets[killFlag[0]] , "とびつく");
+
 
                 character_Status.now_HP -= (character_Status.now_defense - attack * 1.2f);//ダメージ処理
                 break;
                 
         }
         
+    }
+    IEnumerator AbilityAnime(GameObject target , string name)
+    {
+        target.transform.position += new Vector3(2,0,0);
+        yield return null;
     }
 }

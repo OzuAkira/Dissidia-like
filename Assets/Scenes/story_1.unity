@@ -4060,6 +4060,7 @@ GameObject:
   - component: {fileID: 1309063680}
   - component: {fileID: 1309063681}
   - component: {fileID: 1309063682}
+  - component: {fileID: 1309063683}
   m_Layer: 0
   m_Name: GamMaster
   m_TagString: Untagged
@@ -4181,6 +4182,24 @@ MonoBehaviour:
   characters: []
   abilityList: {fileID: 11400000, guid: a39ebb8155d2f5042a25fd150b0a7928, type: 2}
   stage: {fileID: 1322931823}
+--- !u!114 &1309063683
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1309063677}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f27d2351bd99434ca4bc097dba06e80, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text_and_frame: {fileID: 0}
+  image: {fileID: 0}
+  imagesArray:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &1322931822
 GameObject:
   m_ObjectHideFlags: 0
