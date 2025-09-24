@@ -60,15 +60,25 @@ public class toraion : MonoBehaviour
                 AbilityAnime(_targets[killFlag[0]] , "とびつく");
 
 
-                character_Status.now_HP -= (character_Status.now_defense - attack * 1.2f);//ダメージ処理
+                float damge = character_Status.now_HP - (character_Status.now_defense - attack * 1.2f);//ダメージ予測
+                StartCoroutine(takeDamge());
                 break;
                 
         }
-        
+        IEnumerator takeDamge()//アニメーションを再生
+        {
+
+            yield return new WaitForSeconds(1);
+            Debug.Log("アニメーションを再生するよ！");
+
+        }
     }
     IEnumerator AbilityAnime(GameObject target , string name)
     {
         target.transform.position += new Vector3(2,0,0);
-        yield return null;
+        textManager.putText(name);
+        yield return new WaitForSeconds(1.5f);
+        target.transform.position -= new Vector3(2, 0, 0);
     }
+    
 }
